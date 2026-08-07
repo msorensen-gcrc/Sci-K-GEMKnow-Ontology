@@ -1,0 +1,1543 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix schema: <http://schema.org/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns0: <http://rs.tdwg.org/dwc/terms#> .
+@prefix ns1: <http://purl.obolibrary.org/obo/> .
+@prefix ns2: <http://purl.org/linguistics/gold/> .
+@prefix ns3: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix ns4: <http://ihtsdo.org/snomedct/organism#> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/> a owl:Ontology .
+dc:description
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  rdfs:comment "Text", "annoation" ;
+  rdfs:label "dcterms:description" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#cebp:equivalentNERterm> a owl:AnnotationProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#cebp:exampleTextSnippet> a owl:AnnotationProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#cebp:implementationChallengesAssociatedCosts> a owl:AnnotationProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#cebp:layDescription> a owl:AnnotationProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#cebp:personalCommunication> a owl:AnnotationProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#cebp:relatedQuestions> a owl:AnnotationProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#cebp:useCase-text> a owl:AnnotationProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/cebp:implementationChallengesDisadvantages> a owl:AnnotationProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/cebp:implementationChallengesUseScenario> a owl:AnnotationProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/cebp:implementationChallengesWhatMeasured> a owl:AnnotationProperty .
+<http://ihtsdo.org/snomedct/organism#LANGUAGECODE> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/BCO_0000060> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/BFO_0000179> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/BFO_0000180> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000111> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000112> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000114> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000115> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000116> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000117> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000119> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000424> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000600> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000601> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000602> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0010000> a owl:AnnotationProperty .
+dc11:creator a owl:AnnotationProperty .
+dc11:keyword
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Resources> ;
+  dc:description "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas (e.g., is a keyword in a paritcular resouce, connected to that resource)" ;
+  rdfs:comment "Niode", "Text" ;
+  rdfs:label "Keyword" .
+
+dc:bibliographicCitation
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  rdfs:comment "Text", "annoation" ;
+  rdfs:label "dcterms:bibolographicCitation" .
+
+dc:license
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dc:description """A license document that applies to this content, typically indicated by URL.
+
+(A license under which the dataset is distributed.)""" ;
+  rdfs:comment "Resource or URL", "annotation" .
+
+dc:source a owl:AnnotationProperty .
+dc:title
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  rdfs:comment "Text", "annotation" ;
+  rdfs:label "dcterms:title" .
+
+<http://purl.org/linguistics/gold/synonym>
+  a owl:AnnotationProperty ;
+  rdfs:label "gold:synonym" .
+
+<http://purl.org/linguistics/gold/translation>
+  a owl:AnnotationProperty ;
+  rdfs:label "gold:translation" ;
+  skos:definition "The relation between an orthographic expression in one language and some orthographic expression in another such that both expressions have the same or roughly the same meaning." .
+
+bibo:bibo:doi
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dc:description "a persistent identifier or handle used to uniquely identify various objects" ;
+  rdfs:comment "URL", "annotation" .
+
+<http://rs.tdwg.org/dwc/terms#scientificName> a owl:AnnotationProperty .
+<http://rs.tdwg.org/dwc/terms#taxonNameID> a owl:AnnotationProperty .
+schema:audio a owl:AnnotationProperty .
+schema:author a owl:AnnotationProperty .
+schema:keywords a owl:AnnotationProperty .
+schema:url a owl:AnnotationProperty .
+rdfs:publication a owl:AnnotationProperty .
+rdfs:video a owl:AnnotationProperty .
+rdfs:website a owl:AnnotationProperty .
+owl:sameAs
+  a owl:AnnotationProperty, owl:ObjectProperty, owl:InverseFunctionalProperty ;
+  rdfs:isDefinedBy "OWL describes semantic relationships. Helpful for ingesting data/entities expressed in different schemas (as described in this crosswalk in columns F +). Use in metadata graph." .
+
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> a owl:AnnotationProperty .
+skos:altLabel
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  rdfs:comment "Text", "annotation" ;
+  rdfs:label "skos:altLabel" .
+
+skos:definition
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dc:description "A ddefinition of the Ontology Concept or Resource item." ;
+  rdfs:comment "Text", "annotation" .
+
+skos:example a owl:AnnotationProperty .
+skos:related a owl:AnnotationProperty .
+dcat:endpointURL
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dc:description "URL of the item. Actual bytes of the media object, for example the image file or video file; Location of a page describing the dataset.) Meant to cover access and download of resources." ;
+  rdfs:comment "URL", "annotation" .
+
+foaf:image
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Resources> ;
+  rdfs:comment """Indicates an image file type in the resource cache. 
+
+The "Data Processing and Education" ontology Class will be connected to the Science Translator image files by a "hasResource" relationship.""" ;
+  rdfs:label "foaf:image" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#hasMetaphor> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#informs>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isApplicationOf> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isProvidedBy>
+  a owl:ObjectProperty ;
+  owl:inverseOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/provides> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isRepresentativeOf> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#makesAssessmentsOf> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/collaborativelyImplements> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/describes> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/hasExpertise> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/hasKeyword> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/hasLocation> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/hasRole> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isA> a owl:ObjectProperty, owl:TransitiveProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isAkeyword> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isMeasuredBy> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isPartOf> a owl:ObjectProperty, owl:TransitiveProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isUsefulFor> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/occurrenceDeterminedBy> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/provides> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/translatedAs> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/usedToAssess> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//isExampleOf> a owl:ObjectProperty .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ClimateChangePolicy>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationPolicyFramework> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#FirstNationsCommunities>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousCommunity>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isRepresentativeOf> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousTerritory>
+  ] .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#GenomicsTrainingResources>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//DataProcessingAndEducation> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#NationalMarineConservationArea>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeoLocation> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#NorthernIndigneousCommunities>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousCommunity> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#OnlineGenomicsCourse>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTools>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isProvidedBy> ;
+    owl:hasValue <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ThreatenedSpeciesInitiative>
+  ] .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ProvincialPark>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeoLocation> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#http://purl.org/dc/terms/rightsHolder>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousPartners> ;
+  rdfs:label "rightsholder"@en ;
+  skos:definition """This term refers to the fact that Indigenous Peoples are “rights and title holders.”
+Indigenous Peoples’ constitutionally protected rights allow them to bind up a project in a legal process.
+Indigenous communities are not mere stakeholders, they are rights-holders.""" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/AcademicInstitution>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Producers> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/BiogenomeDataAndProcess>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/provides> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ReferenceGenome>
+  ] ;
+  dc:description "Canada BioGenome Project (www.biogenome.ca), which has the aim of producing annotated genomes for approximately 400 Canadian species that are of cultural, conservation, scientific, and/or economic significance. Having a reference genome available increases the opportunities to incorporate genomic data into Species conservation." ;
+  rdfs:isDefinedBy "Species of interest within the scope of the CEBP and the genomics data acquired through the CEBP for distribution and use - types of species and types of databases belong in this Class." .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/CommitteeMember>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/CommunityScholar>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousPartners> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Company>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Consumers>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Actor> ;
+  dc:description "An Actor that is neither a Consumer nor Producer, but a grop, typically for-proft, working toward conservation, stewardship, and/or genomics-informed interventions for the flourishing of species diversity, biodiversity, and socio-ecological systems." ;
+  rdfs:label "Company" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationArea>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeoLocation> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#informs> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isAkeyword> ;
+    owl:hasSelf true
+  ] ;
+  dc:description "Active interpretative processes and methodologies for evaluating wildlife for purposes of conservation, typically referring to populations. May or may no be related to genomics-informed assessments" ;
+  owl:sameAs "genomics-informed conservation approaches" ;
+  skos:altLabel "Genomics Applications" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationGenomicsProcess> a owl:Class .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationManager>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Consumers>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isRepresentativeOf> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#NationalMarineConservationArea>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isRepresentativeOf> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ProvincialPark>
+  ] ;
+  skos:altLabel "ConservationBiologist", "ConservationScientist", "ConservationZoologist", "Wildlife Biiologist", "Zoologist" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationPolicy>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationPolicyFramework> ;
+  skos:related "policy" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationPolicyFramework>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//ConservationFrameworks>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology>
+  ] ;
+  dc:description "Conservation Policy refers to nature or wildlife conservation, management or stewardship policies. This includes governmental or organizational strategies aimed at protecting natural areas and species through measures such as land acquisition, management planning, and incentivizing ownership changes within protected areas, as well as governmental, organizational, Indigenous, or other bodies." ;
+  rdfs:label "Conservation Policy Frameworks" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#informs> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isAkeyword> ;
+    owl:hasSelf true
+  ] .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Consumers>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Roles>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#makesAssessmentsOf> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#makesAssessmentsOf> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationGenomicsProcess>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#makesAssessmentsOf> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/collaborativelyImplements> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>
+  ] ;
+  dc:description "An actor (e.g., researcher, application, or system) that uses the CEBP data, systems, tools, and ontologies to gain insights, build other systems, or work toward conservation, stewardship, and/or genomics-informed interventions for the flourishing of species diversity, biodiversity, and socio-ecological systems." ;
+  rdfs:label "Consumer" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ContentTranslation>
+  a owl:Class ;
+  rdfs:subClassOf <http://w3id.org/vcb/fel#MetaphoricReference> ;
+  rdfs:comment "Class to categorize resources for the Science Translator site page." .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Elder>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousPartners> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Environment> a owl:Class .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/EnvironmentalGovernance>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationPolicyFramework> ;
+  rdfs:comment """Environmental governance: Broadening ontological spaces for a more livable world
+DePuy et al., 2021
+"By examining the ontological underpinnings of three environmental governance domains (land, water, biodiversity), we find that dominant contemporary environmental governance concepts and policy instruments are grounded in a modernist ontology which actively shapes the world, making certain aspects and relationships visible while invisibilizing others...In particular, we examine what taking seriously the right to self-determination enshrined in the United Nations Declaration on the Rights of Indigenous Peoples (UNDRIP) could mean for acknowledging Indigenous ontologies as systems of governance in their own right; what challenges and opportunities exist for recognizing and translating ontologies across socio-legal regimes; and how embracing the dynamism and hybridity of ontologies might complicate or advance struggles for material and cognitive justice."
+
+https://doi.org/10.1177/25148486211018565""" ;
+  rdfs:label "Environmental Governance" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ExSituBiologist>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Producers>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isPartOf> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/WorkingGroup>
+  ] .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsDataValidation>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Producers> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsExpert>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Producers> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isApplicationOf> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTools>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#OnlineGenomicsCourse>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isPartOf> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isAkeyword> ;
+    owl:hasSelf true
+  ] ;
+  rdfs:label "genomics method" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsServiceProvider>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Producers> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isAkeyword> ;
+    owl:hasSelf true
+  ] .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsToolkitDeveloper>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Producers> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTools> a owl:Class .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeoLocation>
+  a owl:Class ;
+  rdfs:comment "Node" ;
+  rdfs:isDefinedBy "Placename in text. Natural language text name. To be used with the predicate \"hasLocation\"" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Government>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Consumers> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/HTO>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousPartners> ;
+  dc:description "Hunters and Trappers Organization" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ID>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  rdfs:comment "Text" ;
+  rdfs:isDefinedBy "The identifier in Neo4j that identifies the node." .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousCommunity>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousPartners> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousCouncil>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousOrganization>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isRepresentativeOf> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#NationalMarineConservationArea>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#isRepresentativeOf> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousTerritory>
+  ] .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousGovernment>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Government> ;
+  rdfs:label "Indigenous Government"@en .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousOrganization>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Consumers> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousPartners>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Consumers> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousPersonaResources>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Resources>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/hasKeyword> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology>
+  ] .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousTerritory>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeoLocation> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/InuitCommunities>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousCommunity> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/InuitOrganization>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousOrganization> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/KnowledgeHolder>
+  a owl:Class ;
+  rdfs:subClassOf <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/LANGUAGECODE>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  rdfs:comment "Text", "annotation", "e.g., \"en\" for English; \"iu\" for Inuktitut" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/LandStewards>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Consumers> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Location>
+  a owl:Class ;
+  owl:equivalentClass <http://rs.tdwg.org/dwc/dwctype/Location> ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeoLocation> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/NGO>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Consumers> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Producers>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Roles>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#makesAssessmentsOf> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/collaborativelyImplements> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>
+  ] ;
+  dc:description "An actor (e.g., researcher, application, or system) that provides resources (e.g., genomics knowledge, data, or tools) for discovery in the CEBP to gain insights, build other systems, or work toward conservation, stewardship, and/or genomics-informed interventions for the flourishing of species diversity, biodiversity, and socio-ecological systems." ;
+  rdfs:label "Producers" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ReferenceGenome>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/BiogenomeDataAndProcess> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ResearchInstitution>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Roles> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Producers>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isA> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsExpert>
+  ] .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Roles>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Actor> ;
+  dc:description "The contextual properties or behavior of an entity (i.e., Actor) when it participates in a relation or activity." ;
+  rdfs:label "Roles" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SampleCollection>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/BiogenomeDataAndProcess> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SciencePolicyExperts>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Committee> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ScientistPersonaResources>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Resources> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpatialRegion>
+  a owl:Class ;
+  owl:equivalentClass <http://purl.obolibrary.org/obo/BFO_0000006> ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeoLocation> ;
+  rdfs:comment "Region - continuum entity (polygon, line)" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Species> a owl:Class .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/BiogenomeDataAndProcess> ;
+  dc:description "The Soecues Genomics Data entity pulls data from the Canada Biogenome project in the form of several specific, constrained metadata fields. This constrained-parameter view is presented as a filter of information to allow users to more easily and quickly understand, for a particular species, if a sample for genomics analysis has been acquired, if the sample has been sequenced, and to view the quality identifier of a genome sequence." ;
+  ns0:scientificName "" ;
+  ns0:taxonNameID "" ;
+  rdfs:label "Species Genomics Data" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/WorkingGroup>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Consumers>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/collaborativelyImplements> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>
+  ] ;
+  dc:description """Working Group Objectives (example):
+1. Provide a mechanism for networking and collaboration among
+diverse interests in the conservation of a species.
+2. Provide a forum to discuss active projects, the latest research, and
+co-ordinated approaches to threat mitigation.
+3. Provide expert advice, education, and outreach to organizations
+and individuals on a species' conservation.
+4. Encourage ecosystem-based or other Conservation Strategy or Conservation Action approaches to species
+recovery and ensure integration of in situ and ex situ efforts in a
+One Plan Approach, or other approach
+5. Include a two-eyed seeing approach that incorporates many
+knowledge systems to all activities.""" ;
+  dc:source "Chabot, A., Thompson, H., Colston, L., Elliott, G., McCurdy-Adams, H., & Maloney, A. 2023. Eastern Massasauga Rattlesnake Genomics Workshop: Participant Handbook. Canadian Species Initiative (CSI), Cambridge, ON, CAN." .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/application>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ContentTranslation>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isAkeyword> ;
+    owl:hasSelf true
+  ] ;
+  rdfs:comment "Class to categorize \"applications\" resources for the Science Translator site page." .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/canadianGovernment>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Government> ;
+  rdfs:label "Canadian Government" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/collaborativeConservationFrameworks>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//ConservationFrameworks>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isInformedBy> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology>
+  ] ;
+  dc:description """To support conditions for effective, sustained,
+and equitable collaborations across relevant sectors and interests, we propose an integrated frame-work (Fig. 3) that includes three key dimensions, namely: (i) holistic worldviews and perspectives, (ii) capacity development opportunities, and (iii) dedicated structural supports (e.g., funding and resources, leadership) (Bowen and Ebi 2015; Meissner 2018; Cooke et al. 2020).
+
+The choice of theory, method, and engagement (i.e., the framing) determines
+which conceptualizations, causal interpretations, moral evaluations and (or) treatment recommendations arise among a multiplicity of potential perspectives. Consequently, the framing determines
+which questions are asked, how knowledge is produced, and how issues are interpreted, prioritized,
+moralized, and responded to (Entman 1993; Chong and Druckman 2007).
+Representing complex phenomena, such as climate change and human health, using simplified
+physical representations (e.g., “climate reductionism” (Rigg and Mason 2018) and “biomedical
+reductionism” (Soto and Sonnenschein 2018)), conceals the societal (e.g., political, socio-economic,
+cultural, historical) dimensions embedded in such processes. Such reductionist approaches
+also restrict the evidence base and consequently the way in which issues are responded to (Krieger et al. 2012; Soto and Sonnenschein 2018; Planque et al. 2019). Results predicated exclusively
+on quantitative physical data are likely to engender policies and initiatives that reflect such
+approaches. Relatedly, singular and decontextualized focuses on climate change (which pervade much existing environmental literature) can distract and disorient research away from more pressing under-
+lying issues and from actions that can be taken now to improve the lives of local communities (Huntington et al. 2019).
+
+The epistemological, methodological, and political factors that influence inquiry, and researchers’ and
+practitioners’ worldviews and perspectives, are thus worthy of being made explicit, and critically
+interrogated through insights from the interpretative humanities and social sciences (Krieger 2011).
+Indeed, there is a need to bridge the “significant fissure between studies that apply positivist epistemologies and quantitative methodologies, and those that deploy constructivist/critical research and qualitative methods” (Masuda et al. 2008, p. 446).
+
+Canada has traditionally emphasized knowledge derived from the
+natural sciences, in the public narrative equal importance is given to other forms of knowledge, including local and Indigenous Knowledge (Macdonald 2018). Inadequate links between researchers
+and policy makers, and the lack of participatory mechanisms are highlighted among issues that have
+hindered integrated approaches to ocean governance in Canada (Sander 2018).
+Meaningful engagement beyond academic sectors at various scales (e.g., community leaders, civic
+institutions, policy makers, health practitioners, industries, and others) is needed to: identify, and
+derive deeper understanding of, the priority health issues facing local populations; communicate risks
+in culturally safe and locally relevant manners; and ensure actions developed (policy, programming,
+and recommendations) are tailored to local contexts and people’s lived experiences (Rigg and
+Mason 2018; Meredith et al. 2019). Several frameworks and examples of participatory approaches to
+support knowledge co-production and weaving or braiding together Indigenous and western knowl-
+edge are reported in the literature (Bartlett et al. 2012; Plante et al. 2016). Participatory modelling
+and scenario-based approaches, for example, provide opportunities to include local and Indigenous
+knowledge in risk assessment and adaptation planning and present the opportunity to derive more
+holistic causal hypotheses regarding the direct and indirect links between oceans and human health
+(IPBES 2016; Kenny 2019).
+
+Notably, there is a need to ensure the inclusion of those most affected by, but least socio-politically
+positioned to influence, ocean and public health policy in knowledge co-creation processes
+(i.e., procedural and distributive justice) (Minkler et al. 2006; Schlosberg 2007). As Indigenous
+Peoples take steps to improve wellness through the revitalization and resurgence of traditional
+food and medicine and ocean and fisheries stewardship systems (Coté 2016; Beveridge 2019), processes that affirm Indigenous participation and rights may support broader reconciliation.
+To build a respectful dialogue, such processes must include methodologies (notably, as relevant for
+Indigenous Peoples, decolonizing methodologies—see for example (Smith 2013; Braun et al. 2014))
+and equitable research partnership (e.g., empowering community members as co-researchers) that
+explicitly recognize, and actively work to counter, the ways in which institutional, situational, and
+dispositional factors have silenced certain voices and viewpoints and have served to further marginal-
+ize and disempower. Practices such as storytelling and art, for example, may provide a basis for indi-
+viduals and communities to express and validate experiences and epistemologies, while nurturing
+relationships and knowledge sharing (Dolan and Ommer 2008; Lewis 2011; Rathwell and
+Armitage 2016).""" ;
+  dc:source """Kenny T-A, Archambault P,
+Ayotte P, Batal M, Chan HM, Cheung W,
+
+Eddy TD, Little M, Ota Y, Pétrin-
+Desrosiers C, Plante S, Poitras J, Polanco F,
+
+Singh G, and Lemire M. 2020. Oceans and
+human health—navigating changes on
+Canada’s coasts. FACETS 5: 1037–1070.
+doi:10.1139/facets-2020-0035""" ;
+  rdfs:label "Collaborative Conservation Frameworks" ;
+  rdfs:publication """Kenny T-A, Archambault P,
+Ayotte P, Batal M, Chan HM, Cheung W,
+
+Eddy TD, Little M, Ota Y, Pétrin-
+Desrosiers C, Plante S, Poitras J, Polanco F,
+
+Singh G, and Lemire M. 2020. Oceans and
+human health—navigating changes on
+Canada’s coasts. FACETS 5: 1037–1070.
+doi:10.1139/facets-2020-0035""" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/governmentAgency>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Government> ;
+  rdfs:label "Government Agency"@en .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#ConservationGenomicsProcess> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk>
+  a owl:Class ;
+  rdfs:comment """Entities in this class are used for graph db implmentation as a "metadata graph", acting as the semantic mediator for external resources. The Metadata Crosswalk entities represent nodes to map over metadata fields. This action is no limited to the entities in the Metadata Crosswalk class, but all entites in the ontology can and should also be used in this way. 
+
+Connected via owl:sameAs predicate.""" ;
+  rdfs:label "Metadata Crosswalk" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/provincalGovernment>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/canadianGovernment> ;
+  rdfs:label "Provincial Government" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Species> ;
+  rdfs:comment "Species of Interest as identified through engagement with end users. Species may or may not be sequenced by Canada Biogenome Project, but has been identified as related and important for knowledge mobilization through resources such as reports." ;
+  rdfs:label "Species of Interest" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/useCase>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ContentTranslation>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/isAkeyword> ;
+    owl:hasSelf true
+  ] ;
+  rdfs:comment "Class to categorize \"use case\" resources for the Science Translator site page." .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#ConservationGenomicsProcess>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#IndigenousPartners>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Producers> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#informs> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>
+  ] ;
+  skos:definition """Inuit Elders in Nunavut have identified a framework for Inuit Qaujimajatugangit
+which is grounded in four big laws or maligait (Government of Nunavut, C & SS, et al 2007). All cultural beliefs and values are associated with the implementation of these Maligait, ultimately contributing to "living a good life" which is described as the purpose of being. These maligait are:
+working for the common good
+﻿﻿﻿respecting all living things
+﻿﻿﻿Aputiqattigiit: maintaining harmony and balance
+﻿﻿﻿continually planning and preparing for the
+
+In addition, Inuit Elders identified six guiding principles (Nunavut Tunngavik Inc., 2000a). The Nunavut government later added an additional two. These 8 guiding principles form the basis of an interlocking conceptual philosophy for IQ but also inherent in each is a process for developing the principle in an individual and in society. Taken together they form a plan for the continuous application of IQ in Inuit society. The 8 guiding principles are:
+ᐃᓅᖃᑎᒌᑦᓯᐊᕐᓂᖅ — Inuuqatigiitsiarniq: Respecting others, relationships, and caring for people.
+ᑐᙵᓇᕐᓂᖅ — Tunnganarniq: Fostering good spirit by being open, welcoming, and inclusive.
+ᐱᔨᑦᓯᕐᓂᖅ — Pijitsirniq: Serving and providing for family and/or community.
+ᐋᔩᖃᑎᒌᓐᓂᖅ — Aajiiqatigiinniq: Decision-making through discussion and consensus.
+ᐱᓕᒻᒪᒃᓴᕐᓂᖅ — Pilimmaksarniq: Development of skills through observation, mentoring, practice, and effort.
+ᐃᑲᔪᖅᑎᒌᓐᓂᖅ — Ikajuqtigiinniq: Working together for a common cause.
+ᖃᓄᖅᑑᕐᓂᖅ — Qanuqtuurniq: Being innovative and resourceful.
+ᐊᕙᑎᑦᑎᓐᓂᒃ ᑲᒪᑦᓯᐊᕐᓂᖅ — Avatittinnik Kamatsiarniq: Respect and care for the land, animals, and the environment.""" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#RecoveryActions>
+  a owl:Class ;
+  rdfs:subClassOf <http://purl.obolibrary.org/obo/ENVO_01001171> ;
+  skos:definition "as specifically related to MRS recovery actions; the conservation frameworks that the decision tree is built on" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#informs> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/EnvironmentalGovernance>
+  ] ;
+  dc:description "Human-human relationship, human-nature relationship and interaction as relates to Biophysiography and the impacts of environmental and human-induced pressures on well-being, livelihood, and self-determination." ;
+  rdfs:label "Social Ecology" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Actor>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#informs> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationPolicyFramework>
+  ] ;
+  dc:description "Any entity, human or non-human, that can act, exert influence, or cause change within a network or system. Also known as \"actant\"." ;
+  rdfs:label "Actor" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Committee>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Actor> ;
+  dc:description "An Actor that is neither a Consumer nor Producer, but a coalition or group working toward conservation, stewardship, and/or genomics-informed interventions for the flourishing of species diversity, biodiversity, and socio-ecological systems." ;
+  rdfs:label "Committee" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//ConservationFrameworks> a owl:Class .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//DataProcessingAndEducation>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Resources>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/describes> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/describes> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>
+  ] .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//GenomeProjects>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Producers> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Resources>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/hasKeyword> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/hasKeyword> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/hasKeyword> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>
+  ] ;
+  rdfs:comment """Note that in the gemknow graph database system uses Neo4j software, which doesn’t allow two properties (e.g., Annotation Properties) to have the same name. If more than one annotation property of the same name is needed, this system  stores them as arrays. This storage solution is JSON-LD compliant. Example:
+
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@id": "http://example.org/resource1",
+  "dcterms:source": ["Source 1", "Source 2", "Source 3"]
+}
+
+The accompanying CYPHER query, for example, would have multiple dcterms:source properties in square brackets, as follows:
+
+CREATE (n:Example {`dcterms:source`:["example1.com", "example2.com"]})""" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//UseCases>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationGenomicsProcess> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/cebp#entityContext>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  rdfs:label "cebp:entityContext"@en .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/cebp#useCase_publication>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  rdfs:comment "Annotation", "Individual resources will be categorized under \"useCase\" entity.", "Resource URL or Text" .
+
+<http://purl.obolibrary.org/obo/BFO_0000006>
+  a owl:Class ;
+  owl:equivalentClass <http://rs.tdwg.org/dwc/dwctype/Location> ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeoLocation>, <http://rs.tdwg.org/dwc/dwctype/Location> ;
+  ns1:BFO_0000179 "s-region" ;
+  ns1:BFO_0000180 "SpatialRegion" ;
+  ns1:IAO_0000116 "BFO 2 Reference: Spatial regions do not participate in processes."@en, "Spatial region doesn't have a closure axiom because the subclasses don't exhaust all possibilites. An example would be the union of a spatial point and a spatial line that doesn't overlap the point, or two spatial lines that intersect at a single point. In both cases the resultant spatial region is neither 0-dimensional, 1-dimensional, 2-dimensional, or 3-dimensional."@en ;
+  ns1:IAO_0000600 "A spatial region is a continuant entity that is a continuant_part_of spaceR as defined relative to some frame R. (axiom label in BFO2 Reference: [035-001])"@en ;
+  ns1:IAO_0000601 "All continuant parts of spatial regions are spatial regions. (axiom label in BFO2 Reference: [036-001])"@en ;
+  ns1:IAO_0000602 "(forall (x y t) (if (and (SpatialRegion x) (continuantPartOfAt y x t)) (SpatialRegion y))) // axiom label in BFO2 CLIF: [036-001] ", "(forall (x) (if (SpatialRegion x) (Continuant x))) // axiom label in BFO2 CLIF: [035-001] " ;
+  rdfs:isDefinedBy ns1:bfo.owl ;
+  rdfs:label "spatial region"@en .
+
+ns1:ENVO_00000358
+  a owl:Class ;
+  rdfs:subClassOf ns1:ENVO_01001567 ;
+  rdfs:comment "This class needs revision. Protected areas may be designated for multiple uses, and more clarity is needed. Further, the protections applied to the entities within the site may not prioritise biodiversity conservation. At a very general level, \"protection\" suggests that some forms of use are, in principle, excluded." ;
+  rdfs:label "area of protected biodiversity" ;
+  skos:definition "An area of land or of a body of water in which management practices, through legal or other effective means, prioritise the protection and maintenance of biological diversity, and of natural and associated cultural resources." .
+
+ns1:ENVO_00000362
+  a owl:Class ;
+  rdfs:subClassOf ns1:ENVO_00000374 ;
+  rdfs:label "marine park area" ;
+  skos:definition "A protected area of the sea usually established to preserve a specific habitat and ensure the ecosystem is sustained for the organisms that exist there. Most marine parks are designated by governments, and organized like watery national parks." .
+
+ns1:ENVO_00000374
+  a owl:Class ;
+  rdfs:subClassOf ns1:ENVO_00000358 ;
+  rdfs:label "wildlife management area" ;
+  skos:definition "A protected area with the purpose of protecting and managing wild life" .
+
+ns1:ENVO_01001170
+  a owl:Class ;
+  rdfs:subClassOf ns1:ENVO_02500026 ;
+  rdfs:label "active ecosystem management process" ;
+  skos:definition "A process during which an ecosystem, its parts, or the processes it participates in are modified by human intervention to accomplish an objective" .
+
+ns1:ENVO_01001171
+  a owl:Class ;
+  rdfs:subClassOf ns1:ENVO_01001170 ;
+  ns2:synonym "conservation action", "conservation process", "nature conservation" ;
+  rdfs:label "conservation-focused active ecosystem management process" ;
+  skos:definition "An active management process which has the conservation of an ecosystem, or a part thereof, as its primary objective." .
+
+ns1:ENVO_01001567
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeoLocation> ;
+  rdfs:label "protected area" ;
+  skos:definition "An environmental zone which 1) contains ecosystems, constructed features, or other entities deemed to be of natural, historical, cultural, or other significance and 2) has been afforded legal protections restricting one or more forms of use by a competent authority." .
+
+ns1:ENVO_01001635
+  a owl:Class ;
+  rdfs:subClassOf ns1:ENVO_01001171 ;
+  rdfs:label "biodiversity conservation process" ;
+  skos:definition "A conservation process during which the variability of life - from genes to ecosystems - is preserved.." .
+
+ns1:ENVO_02500026
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy> ;
+  rdfs:comment "Relabel the obo foundry unique label to be generic process" ;
+  rdfs:label "anthropogenic modulatory intervention process" ;
+  skos:definition "A process during which humans apply technology to alter the magnitude, duration, rate, or impact of an environmental process." .
+
+dc:Agent
+  a owl:Class ;
+  owl:equivalentClass foaf:Agent ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Actor> .
+
+dc:alternative
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> .
+
+dc:contributor
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dc:description "The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.)." ;
+  rdfs:comment "Node", "Organization or Person" .
+
+dc:format
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dc:description "The file format of a downloadable resource from the endpointURL." ;
+  rdfs:comment "Resource", "annotation" .
+
+dc:rightsHolder
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/IndigenousPartners>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dc:description "The party holding the legal copyright to the Resource or Information." ;
+  rdfs:comment "Node", "Organization or Person" .
+
+bibo:bibo:uri
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dc:description "Uniform Resource Identifier for a globally unique ID for each node in the knowledge graphy (entity in the ontology). It is a unique sequence of characters that identifies an abstract or physical resource, such as resources on a webpage, mail address, phone number," ;
+  rdfs:comment "URL", "annotation" .
+
+<http://rs.tdwg.org/dwc/dwctype/Location>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GeoLocation>, ns1:BFO_0000006 ;
+  ns1:BCO_0000060 "location of an event"@en ;
+  ns1:IAO_0000114 ns1:IAO_0000123 ;
+  ns1:IAO_0000424 "The site  where a process occurs. In the context of Dawrin Core, this is generally where a specimen is collected, an organism is observed or a measurement is taken."@en .
+
+schema:Person
+  a owl:Class ;
+  owl:equivalentClass foaf:Person ;
+  rdfs:subClassOf <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+
+<http://w3id.org/vcb/fel#MetaphoricReference>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Resources> .
+
+rdfs:label
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  rdfs:comment "Text", "annotation" ;
+  rdfs:label "rdfs:label" .
+
+<http://www.w3.org/2000/10/swap/pim/contact#Person>
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Actor>, [
+    a owl:Restriction ;
+    owl:onProperty <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/hasRole> ;
+    owl:someValuesFrom <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Roles>
+  ] ;
+  dc:description "An individual actor (human being)." ;
+  rdfs:label "Person" .
+
+skos:note
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dc:description "A general note, for any purpose." ;
+  rdfs:comment "Text", "annotation" .
+
+dcat:accessRights
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dc:description "The party holding the legal copyright to the Resource or Information." ;
+  rdfs:comment "Text", "annotation" .
+
+dcat:contactPoint
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dc:description "A contact point, e.g. email, telephone, address. These elements are listed all under this annotation property." ;
+  rdfs:comment "Resource", "annotation" .
+
+dcat:language
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dc:description "The language of the content or performance or used in an action.  Please use one of the language codes from the IETF BCP 47 standard." ;
+  rdfs:comment "Text", "annotation" .
+
+dcat:relation
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dc:description "Indicates that the Rersource contains a reference to, but is not necessarily about a concept." ;
+  rdfs:comment "Text", "annotation" .
+
+dcat:source
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dc:description "A Resource from which this work is derived or from which it is a modification or adaption." ;
+  rdfs:comment "Resource, Publication, URL", "annotation" .
+
+foaf:Agent
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Actor> ;
+  rdfs:comment "An agent (eg. person, group, software or physical artifact)." ;
+  rdfs:label "Agent" ;
+  ns3:term_status "stable" .
+
+foaf:Document
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Resources> ;
+  owl:disjointWith foaf:Organization ;
+  dc11:creator "" ;
+  dc11:keyword "" ;
+  dc:bibliographicCitation "" ;
+  dc:description "" ;
+  dc:license "" ;
+  dc:title "" ;
+  bibo:bibo:doi "" ;
+  rdfs:label "Document" ;
+  dcat:endpointURL "" .
+
+foaf:Organization
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Actor> ;
+  owl:disjointWith foaf:Person ;
+  dc:description "An Actor that is neither a Consumer nor Producer, but an entity (e.g., University, nonprofit, non-governmental organization) participating in conservation, stewardship, and/or genomics-informed intervention efforts for the flourishing of species diversity, biodiversity, and socio-ecological systems." ;
+  rdfs:isDefinedBy foaf: ;
+  rdfs:label "Organization" .
+
+foaf:Person
+  a owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Actor> .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ConservationGenomicsForThreatenedSpeciesManagement> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationGenomicsProcess> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#ThreatenedSpeciesInitiative> a owl:NamedIndividual, foaf:Organization .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Avatittinnik_Kamatsiarniq>
+  a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> ;
+  owl:sameAs <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ᐊᕙᑎᑦᑎᓐᓂᒃ_ᑲᒪᑦᓯᐊᕐᓂᖅ> ;
+  ns4:LANGUAGECODE "ISO 639-1"@iu ;
+  ns2:translation "Respect and care for the land, animals, and the environment" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/BiodiversitéQuébec> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SciencePolicyExperts> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/CEMRRIG> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SciencePolicyExperts> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/COSEWIC> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SciencePolicyExperts> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/CSIforWildlife> a owl:NamedIndividual, <http://w3id.org/vcb/fel#MetaphoricReference> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/DNA_Alphabet>
+  a owl:NamedIndividual, <http://w3id.org/vcb/fel#MetaphoricReference> ;
+  dc:description """Genetic information (DNA) has a language like Inuktitut or English
+English alphabet: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Genetic alphabet of DNA has only four ‘letters’: G, A, T and C""" ;
+  dc:source """Thompson, H., Colston, L., Elliott, G., Chabot, A. 2023. Eastern Massasauga Rattlesnake
+Genomics Workshop: Summary Report. Canadian Species Initiative (CSI), Cambridge, ON,
+CAN""" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/DNA_Language>
+  a owl:NamedIndividual, <http://w3id.org/vcb/fel#MetaphoricReference> ;
+  dc:description """Genetic information (DNA) has a language like Inuktitut or English
+English alphabet: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Genetic alphabet of DNA has only four ‘letters’: G, A, T and C""" ;
+  dc:source """Thompson, H., Colston, L., Elliott, G., Chabot, A. 2023. Eastern Massasauga Rattlesnake
+Genomics Workshop: Summary Report. Canadian Species Initiative (CSI), Cambridge, ON,
+CAN""" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Inuuqatigiitsiarniq>
+  a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> ;
+  owl:sameAs <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ᐃᓅᖃᑎᒌᑦᓯᐊᕐᓂᖅ> ;
+  ns4:LANGUAGECODE "ISO 639-1"@iu ;
+  ns2:translation "Respecting others, relationships, and caring for people."@en .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Kunming-MontrealGlobalBiodiversityFramework>
+  a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/collaborativeConservationFrameworks> ;
+  dc:description "The Kunming-Montreal Global Biodiversity Framework (GBF) is a landmark international agreement adopted in 2022 to halt and reverse biodiversity loss by 2030, aiming for a biodiverse world, living in harmony with human processes, by 2050. The framework set 23 targets for countries to collectively protect ecosystems, including those that safeguard and recognize Indigenous rights and knowledge (Targets 21-22), including Free, Prior, and Informed Consent (FPIC) and the full, equitable, and effective participation of Indigenous peoples in biodiversity-related decision-making at all levels."@en ;
+  rdfs:label "Kunming-Montreal Global Biodiversity Framework (GBF)" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/OntarioBiodiversityCouncil> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SciencePolicyExperts> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ᐃᓅᖃᑎᒌᑦᓯᐊᕐᓂᖅ> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ᐊᕙᑎᑦᑎᓐᓂᒃ_ᑲᒪᑦᓯᐊᕐᓂᖅ> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#APEXGeoscience> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Company> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Africa> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Alberta> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#AlexandraKanters> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#AmericanWestMetalsLimited> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Company> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#AmlieRoberto-Charron> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Angola> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#AstonBayHoldings> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Company> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#AtlanticOcean> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Australia> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Axel-HeibergIsland> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#BanksIsland> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#BritishColumbia> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#COSSARO> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SciencePolicyExperts> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#California> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Cameroon> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Canada> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Canada-InuitNunangat-UnitedKingdomArcticResearchProgrammeCINUK> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ResearchInstitution> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#CanadaNorthOutfitting> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Company> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#CanadianArctic> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#CarletonUniversity> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/AcademicInstitution> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#CatherineCullingham> a owl:NamedIndividual, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Chad> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#DavidWatskoJr> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#EastAfrica> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Ekaluktutiak> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#EkaluktutiakHuntersAndTrappersOrganization> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#IndigenousPartners>, foaf:Organization .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#EllesmereIsland> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#EricMorgan> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Eritrea> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#FabienMavrot> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#FosheimPeninsula> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Galapagos> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#GeorgianBay> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#GlasgowSchoolOfArt> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/AcademicInstitution> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#GovernmentOfNorthwestTerritories> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/canadianGovernment> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#GovernmentOfNunavut> a owl:NamedIndividual .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#GreatLakes> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#HuiXinChan> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#JaniceCooke> a owl:NamedIndividual, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#JordanBertagnolli> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Kugluktuk> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#KugluktukAngoniatitAssociation> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#IndigenousPartners>, foaf:Organization .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#KutzResearchGroup> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/AcademicInstitution> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Lisa-MarieLeclerc> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#MatildeTomaselli> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#MattFredlund> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#McCaideWooten> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Mexico> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#MohammodMisbahUddin> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Murray-DarlingBasin> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#NaimaJutha> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#NaturalSciencesAndEngineeringResearchCouncilOfCanada>
+  a owl:NamedIndividual, foaf:Organization ;
+  skos:altLabel "NSERC" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Nigeria> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#OlafChristensen> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#OlokhaktomiutHuntersAndTrappersCommittee> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#IndigenousPartners>, foaf:Organization .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Ontario> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#PolarContinentalShelfProgram> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/canadianGovernment> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#PolarKnowledgeCanada> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/canadianGovernment> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#QueenÄôsUniversityBelfastSchoolOfBiologicalSciences> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/AcademicInstitution> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#QuttinirpaaqJointParkManagementCommittee> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/canadianGovernment> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#RitaHenderson> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#RonanDonovan> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SpeciesAtRisk> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//ConservationFrameworks>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#St.Lawrence> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SusanKutz> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#TabithaMullin> a owl:NamedIndividual, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#TayaForde> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Researcher>, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Ulukhaktok> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#UniversityOfAlberta> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/AcademicInstitution> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#UniversityOfCalgary> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/AcademicInstitution> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#UniversityOfCalgary-FacultyOfVeterinaryMedicine> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/AcademicInstitution> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#UniversityOfCalgaryCummingSchoolOfMedicine> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/AcademicInstitution> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#UniversityOfGlasgowSchoolOfBiodiversityOneHealthAndVeterinaryMedicine> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/AcademicInstitution> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#VictoriaIsland> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#WeberArctic> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Company> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#ZambeziValley> a owl:NamedIndividual, <http://rs.tdwg.org/dwc/dwctype/Location> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#aGoodFishingPlace> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#adapt> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#adaptation> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#adaptivePotential> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#adaptiveTrait> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#adaptivepotential> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#americanBullfrog> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#americanPlaice> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#americanRedstarts> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#amplicon> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#animal> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#animals> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#arcticChar> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#arcticCotton> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#arcticFox> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#arcticHeather> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#arcticMosquitos> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#arcticSurfclam> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#atlanticCod> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#atlanticWhitefish> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#bacteria> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#beavers> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#bee> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#behaviouralAdaptation> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#belugaWhale> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#bioinformatics> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#blandingsTurtle> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#blubblerPowder> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#blueRacer> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#bluebackHerring> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#bodyConditionAnimalChangeIn> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#brantGoose> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#brucella> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#brucellaSuisBiovar> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#brucellosis> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#californiaCondor> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#caribou> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#caribouBull> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#caribouCow> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#caribouSkinMattress> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#changeInAnimalBehavior> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#changeInAnimalDiet> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#changeInFatContent> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#changeOfTasteHarvestedAnimals> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#climate> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Environment> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#climateChange> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Environment> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#clines> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Environment> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#co-evolution> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#collardLemming> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#commonRaven> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#communication> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#communityBasedMonitoring> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#concernForHumanConsumption> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#consensusDecisionMaking> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#conservation> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#contaminants> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Environment>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#continuallyPlanningAndPreparingForTheFuture> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#copperRedhorse> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#culturalPractice> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#culturalRevitalization> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#culturalValue> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#cystsAnimal> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#deepSequencing> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#deleteriousVariation> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#disease> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#diseaseSpread> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#diseaseVector> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#dna> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#dnaBarcoding> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#dnaLanguage> a owl:NamedIndividual, <http://w3id.org/vcb/fel#MetaphoricReference> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#dnaSequence> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#dnaSequencing> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#drought> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Environment>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#easternFoxsnake> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#easternMassasaugaRattlesnake> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#ecology> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#ecotype> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#effectivePopulationSize> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#environment> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#environmentalDna> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#environmentalStewardship> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#epigenetics> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#equity> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#erysipelothrix> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#erysipelothrixRhusiopathiae> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#evergreenHuckleberry> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#evolution> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#ex-situConservation> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#exSituConservation> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#experiment> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#fancyBoot> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#feces> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#ferruginousHawk> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#firTrimOnAParka> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#fire> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Environment>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#fisherman> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#fishing> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#fitness> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#foodSafety> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#foodSecurity> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#foodSovereignty> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#galapagosGiantTortoises> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#gastrointestinalParasiteDiversity> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#geneFlow> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#geneNetworks> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#geneticDiversity> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#geneticDrift> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#geneticInformation> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#geneticMarker> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#geneticSignatures> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#geneticStudy> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#geneticTrait> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#geneticVariance> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#geneticdiversity> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#genetics> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#genomeSequencing> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#genomicData> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#genomicDiversity> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#genomicVariation> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#genomicVulnerability> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#genomics> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#genomicsData> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#goldenPerchM.Ambigua> a owl:NamedIndividual, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#grass> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#greatGreyOwl> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#greaterwhite-frontedGoose> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#greenFrog> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#greenHeron> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#greenSeaUrchin> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#greenlandCockle> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#greyRatsnake> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#grizzlyBear> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#gwa> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#gwas> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#habitatFragmentation> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#hairAnimal> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#harpSeal> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#harvesting> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#havingAMeeting> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#hemlockWoollyAdelgid> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#himalayanBlackberry> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#hoodedSeal> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#hto> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#humanConsumption> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#humpbackWhale> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#hunter> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#hunting> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#hybridization> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#immunity> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#in-situConservation> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#inbreeding> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#indianPlum> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#infection> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#insect> a owl:NamedIndividual .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#interiorDouglasFir> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#inuitAutonomy> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#invasiveSpecies> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#jackPine> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#jaw> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#jonahCrab> a owl:NamedIndividual .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#kayak> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#keystoneSpecies> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#landscapeGenomics> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#lawsOfSocialecologyAndWellBeing> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#lifeHistory> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#localAdaptation> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#lodgepolePine> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#loggerheadSeaTurtle> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#long-tailedVole> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#lossOfCulture> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#lossOfHairAnimal> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#lungworms> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#macquariePerchMacquariaAustralasica> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#maintiningHarmonyAndBalance> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#managementPlan> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#mantleForATraditionslLamp> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#markers> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#metabarcoding> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#midlandPaintedTurtle> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#migration> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#migrationAnimal> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#minkFrog> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#model> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#monitoring> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#monkfish> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#moose> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#mossBladderSnailAquaticSnail> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#mountainPineBeetle> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#mouse> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#muskox> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#muskoxHair> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#muskoxLungworm> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#muskrat> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#narwhal> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#naturalSelection> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#next-generationDnaSequencing> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#niche> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#northAmericanBrownLemming> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#northernLeopardFrog> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#northernMapTurtle> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#northernPropellerClam> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#northernRedbackedVole> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#northernStoneCrab> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#obliqueBandedLeafRoller> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#occurrence> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#omics> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#onePlanApproach> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#pacificSpinyDogfish> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#parasites> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#pathogenReservoir> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#phenotypicVariance> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#phylogeny> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#polarBear> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#policy> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//ConservationFrameworks>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#pollutants> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Environment>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#polymeraseChainReaction>
+  a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> ;
+  skos:altLabel "PCR" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#population> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#populationChange> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#populationConnectivity> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#populationGeneticStructure> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#populationGenetics> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#populationGenomics> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#populationHealthAnimal> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#predator> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#qiviutAndGuardHair> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#radseq> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#range> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#rangeOfASpecies> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#recipeBook> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#recoveryActions> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#redFloweringCurrant> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#redHuckleberry> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#relatedness> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#researcher> a owl:NamedIndividual, dc11:keyword, <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#resourcefulProblemSolving> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#respectForAllLivingThings> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#restrictionsite-associatedDnaSequencing> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#rightToSelfDetermination> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#riparianPlants> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#rossGoose> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#safeButcheringPractices> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#salmonberryRedMorph> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#sample> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#ConservationGenomicsProcess>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#sampleAnimalOrPlantForscience> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#sampleKit> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationStrategy>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#ConservationGenomicsProcess> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#sandhillCrane> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#seal> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#seaweed> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#sedges> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#siameseRosewood> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#sinew> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#singleNucleotidePolymorphisms> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#skillsAndKnowledgeAcquisition> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#smoothSkate> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#snappingTurtle> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#snowGoose> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#snowyOwl> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#snp> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#soleOfABoot> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#sonoranPronghorn> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#spawningChar> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#speciesDistribution> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#speciesNewToThisTerritory> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#spiritualValue> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#spottedTurtle> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#spreadInWater> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#spruce> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#statistics> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#stellerSeaLion> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#stewardshipPractices> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#stickyFalseAsphodel> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#strawberryBlossomWeevil> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#sub-SaharanGrasslands> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Environment> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#swollenJointsAnimal> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#swollenScrotumAndTesticlesAnimal> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#targetedSequencing> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#teeth> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#terrestrialSlug> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#terrestrialSnail> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#thimbleberry> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#threatened> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//ConservationFrameworks>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#traditionalDiet> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#trout> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#uluHandle> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#ungavaCollaredLemming> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#vaccination> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#vancouverIslandMarmot> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#vertebra> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#vulnerability> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/ConservationEvaluation>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsTerm>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#warblesFlies> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#weasel> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#weather> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Environment>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#westernPaintedTurtle> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#wgs> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#whiteArcticHeather> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#whiteRhinoceros> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#whiteShark> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#wholeGeneSequencing>
+  a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod> ;
+  skos:altLabel "WGS" .
+
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#wholeGenomeSequencing> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/GenomicsMethod>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#willow> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#willowPtarmigan> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#wolf> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest>, dc11:keyword .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#wolverine> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#workingForTheCommonGood> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#dump/landfill> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Environment>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#guidingSocialpriciples/philosophy> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#meetingplace/gatheringPlace> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#serving/beingOfService> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#Inuit_Qaujimajatugangit>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#SocialEcology> .
+<http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/#tapeworm/stomachWorms> a owl:NamedIndividual, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/indicators>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/speciesOfInterest> .
+[]
+  a owl:Axiom ;
+  owl:annotatedSource <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture#http://purl.org/dc/terms/rightsHolder> ;
+  owl:annotatedProperty skos:definition ;
+  owl:annotatedTarget """This term refers to the fact that Indigenous Peoples are “rights and title holders.”
+Indigenous Peoples’ constitutionally protected rights allow them to bind up a project in a legal process.
+Indigenous communities are not mere stakeholders, they are rights-holders.""" ;
+  dc:source "https://ipcaknowledgebasket.ca/resources/glossary/#" .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> ;
+  owl:annotatedProperty ns0:scientificName ;
+  owl:annotatedTarget "" ;
+  rdfs:isDefinedBy """GoaT (https://goat.genomehubs.org/projects/CANBP)  metadata entity  scientific_name is pulled from a GET request: "https://goat.genomehubs.org/projects/CANBPemptyColumns=false&query=",
+"schema": "https://schema.org/",""" .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/SpeciesGenomicsData> ;
+  owl:annotatedProperty ns0:taxonNameID ;
+  owl:annotatedTarget "" ;
+  rdfs:isDefinedBy "Defined by NCBI \"dwc:taxonNameID\". At Goat (https://goat.genomehubs.org/projects/CANBP) the metadata entity is  scientific_name. This should be expressed in the gem-know system as \"dwc:taxonNameID\"." .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource ns1:BFO_0000006 ;
+  owl:annotatedProperty ns1:IAO_0000116 ;
+  owl:annotatedTarget "Spatial region doesn't have a closure axiom because the subclasses don't exhaust all possibilites. An example would be the union of a spatial point and a spatial line that doesn't overlap the point, or two spatial lines that intersect at a single point. In both cases the resultant spatial region is neither 0-dimensional, 1-dimensional, 2-dimensional, or 3-dimensional."@en ;
+  ns1:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/0000002> ;
+  rdfs:comment "per discussion with Barry Smith" .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource ns1:BFO_0000006 ;
+  owl:annotatedProperty ns1:IAO_0000600 ;
+  owl:annotatedTarget "A spatial region is a continuant entity that is a continuant_part_of spaceR as defined relative to some frame R. (axiom label in BFO2 Reference: [035-001])"@en ;
+  ns1:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/035-001> .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource ns1:BFO_0000006 ;
+  owl:annotatedProperty ns1:IAO_0000601 ;
+  owl:annotatedTarget "All continuant parts of spatial regions are spatial regions. (axiom label in BFO2 Reference: [036-001])"@en ;
+  ns1:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/036-001> .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource ns1:BFO_0000006 ;
+  owl:annotatedProperty ns1:IAO_0000602 ;
+  owl:annotatedTarget "(forall (x y t) (if (and (SpatialRegion x) (continuantPartOfAt y x t)) (SpatialRegion y))) // axiom label in BFO2 CLIF: [036-001] " ;
+  ns1:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/036-001> .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource ns1:BFO_0000006 ;
+  owl:annotatedProperty ns1:IAO_0000602 ;
+  owl:annotatedTarget "(forall (x) (if (SpatialRegion x) (Continuant x))) // axiom label in BFO2 CLIF: [035-001] " ;
+  ns1:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/035-001> .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Inuuqatigiitsiarniq> ;
+  owl:annotatedProperty ns4:LANGUAGECODE ;
+  owl:annotatedTarget "ISO 639-1"@iu ;
+  rdfs:comment """Official name: Inuktitut
+Native: ᐃᓄᒃᑎᑐᑦ""", "designated by the iu code from the ISO 639-1 standard" .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/Inuuqatigiitsiarniq> ;
+  owl:annotatedProperty ns4:LANGUAGECODE ;
+  owl:annotatedTarget "ISO 639-1"@iu ;
+  rdfs:comment """Official name: Inuktitut
+Native: ᐃᓄᒃᑎᑐᑦ""", "designated by the iu code from the ISO 639-1 standard" .

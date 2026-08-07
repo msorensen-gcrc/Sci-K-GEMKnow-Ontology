@@ -1,0 +1,361 @@
+dc:keyword
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Resources> ;
+  dcterms:description "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas (e.g., is a keyword in a paritcular resouce, connected to that resource)" ;
+  rdfs:comment "Niode", "Text" ;
+  rdfs:label "Keyword" .
+
+dcterms:bibliographicCitation
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  rdfs:comment "Text", "annoation" ;
+  rdfs:label "dcterms:bibolographicCitation" .
+
+dcterms:license
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dcterms:description """A license document that applies to this content, typically indicated by URL.
+
+(A license under which the dataset is distributed.)""" ;
+  rdfs:comment "Resource or URL", "annotation" .
+
+dcterms:source a owl:AnnotationProperty .
+dcterms:title
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  rdfs:comment "Text", "annotation" ;
+  rdfs:label "dcterms:title" .
+
+bibo:bibo:doi
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dcterms:description "a persistent identifier or handle used to uniquely identify various objects" ;
+  rdfs:comment "URL", "annotation" .
+
+<http://ihtsdo.org/snomedct/organism#LANGUAGECODE> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/BCO_0000060> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000114> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000424> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/BFO_0000179> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/BFO_0000180> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000116> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000600> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000601> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0000602> a owl:AnnotationProperty .
+<http://purl.obolibrary.org/obo/IAO_0010000> a owl:AnnotationProperty .
+
+<http://purl.org/linguistics/gold/synonym>
+  a owl:AnnotationProperty ;
+  rdfs:label "gold:synonym" .
+
+<http://purl.org/linguistics/gold/translation>
+  a owl:AnnotationProperty ;
+  rdfs:label "gold:translation" ;
+  skos:definition "The relation between an orthographic expression in one language and some orthographic expression in another such that both expressions have the same or roughly the same meaning." .
+
+<http://rs.tdwg.org/dwc/terms#scientificName> a owl:AnnotationProperty .
+<http://rs.tdwg.org/dwc/terms#taxonNameID> a owl:AnnotationProperty .
+schema:audio a owl:AnnotationProperty .
+schema:author a owl:AnnotationProperty .
+schema:keywords a owl:AnnotationProperty .
+schema:url a owl:AnnotationProperty .
+rdfs:publication a owl:AnnotationProperty .
+rdfs:video a owl:AnnotationProperty .
+rdfs:website a owl:AnnotationProperty .
+owl:sameAs
+  a owl:AnnotationProperty, owl:ObjectProperty, owl:InverseFunctionalProperty ;
+  rdfs:isDefinedBy "OWL describes semantic relationships. Helpful for ingesting data/entities expressed in different schemas (as described in this crosswalk in columns F +). Use in metadata graph." .
+
+
+ns3:term_status> a owl:AnnotationProperty .
+skos:altLabel
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  rdfs:comment "Text", "annotation" ;
+  rdfs:label "skos:altLabel" .
+
+skos:definition
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dcterms:description "A ddefinition of the Ontology Concept or Resource item." ;
+  rdfs:comment "Text", "annotation" .
+
+skos:example a owl:AnnotationProperty .
+skos:related a owl:AnnotationProperty .
+dcat:endpointURL
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk> ;
+  dcterms:description "URL of the item. Actual bytes of the media object, for example the image file or video file; Location of a page describing the dataset.) Meant to cover access and download of resources." ;
+  rdfs:comment "URL", "annotation" .
+
+foaf:image
+  a owl:AnnotationProperty, owl:Class ;
+  rdfs:subClassOf <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/metadataCrosswalk>, <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture//Resources> ;
+  rdfs:comment """Indicates an image file type in the resource cache. 
+
+The "Data Processing and Education" ontology Class will be connected to the Science Translator image files by a "hasResource" relationship.""" ;
+  rdfs:label "foaf:image" .
+
+<http://purl.obolibrary.org/obo/BFO_0000006>
+  a owl:Class ;
+  owl:equivalentClass <http://rs.tdwg.org/dwc/dwctype/Location> ;
+  rdfs:subClassOf cebp:GeoLocation, <http://rs.tdwg.org/dwc/dwctype/Location> ;
+  ns1:BFO_0000179 "s-region" ;
+  ns1:BFO_0000180 "SpatialRegion" ;
+  ns1:IAO_0000116 "BFO 2 Reference: Spatial regions do not participate in processes."@en, "Spatial region doesn't have a closure axiom because the subclasses don't exhaust all possibilites. An example would be the union of a spatial point and a spatial line that doesn't overlap the point, or two spatial lines that intersect at a single point. In both cases the resultant spatial region is neither 0-dimensional, 1-dimensional, 2-dimensional, or 3-dimensional."@en ;
+  ns1:IAO_0000600 "A spatial region is a continuant entity that is a continuant_part_of spaceR as defined relative to some frame R. (axiom label in BFO2 Reference: [035-001])"@en ;
+  ns1:IAO_0000601 "All continuant parts of spatial regions are spatial regions. (axiom label in BFO2 Reference: [036-001])"@en ;
+  ns1:IAO_0000602 "(forall (x y t) (if (and (SpatialRegion x) (continuantPartOfAt y x t)) (SpatialRegion y))) // axiom label in BFO2 CLIF: [036-001] ", "(forall (x) (if (SpatialRegion x) (Continuant x))) // axiom label in BFO2 CLIF: [035-001] " ;
+  rdfs:isDefinedBy ns1:bfo ;
+  rdfs:label "spatial region"@en .
+
+
+
+ns1:ENVO_00000358
+  a owl:Class ;
+  rdfs:subClassOf ns1:ENVO_01001567 ;
+  rdfs:comment "This class needs revision. Protected areas may be designated for multiple uses, and more clarity is needed. Further, the protections applied to the entities within the site may not prioritise biodiversity conservation. At a very general level, \"protection\" suggests that some forms of use are, in principle, excluded." ;
+  rdfs:label "area of protected biodiversity" ;
+  skos:definition "An area of land or of a body of water in which management practices, through legal or other effective means, prioritise the protection and maintenance of biological diversity, and of natural and associated cultural resources." .
+
+ns1:ENVO_00000362
+  a owl:Class ;
+  rdfs:subClassOf ns1:ENVO_00000374 ;
+  rdfs:label "marine park area" ;
+  skos:definition "A protected area of the sea usually established to preserve a specific habitat and ensure the ecosystem is sustained for the organisms that exist there. Most marine parks are designated by governments, and organized like watery national parks." .
+
+ns1:ENVO_00000374
+  a owl:Class ;
+  rdfs:subClassOf ns1:ENVO_00000358 ;
+  rdfs:label "wildlife management area" ;
+  skos:definition "A protected area with the purpose of protecting and managing wild life" .
+
+ns1:ENVO_01001170
+  a owl:Class ;
+  rdfs:subClassOf ns1:ENVO_02500026 ;
+  rdfs:label "active ecosystem management process" ;
+  skos:definition "A process during which an ecosystem, its parts, or the processes it participates in are modified by human intervention to accomplish an objective" .
+
+ns1:ENVO_01001171
+  a owl:Class ;
+  rdfs:subClassOf ns1:ENVO_01001170 ;
+  ns2:synonym "conservation action", "conservation process", "nature conservation" ;
+  rdfs:label "conservation-focused active ecosystem management process" ;
+  skos:definition "An active management process which has the conservation of an ecosystem, or a part thereof, as its primary objective." .
+
+ns1:ENVO_01001567
+  a owl:Class ;
+  rdfs:subClassOf cebp:GeoLocation ;
+  rdfs:label "protected area" ;
+  skos:definition "An environmental zone which 1) contains ecosystems, constructed features, or other entities deemed to be of natural, historical, cultural, or other significance and 2) has been afforded legal protections restricting one or more forms of use by a competent authority." .
+
+ns1:ENVO_01001635
+  a owl:Class ;
+  rdfs:subClassOf ns1:ENVO_01001171 ;
+  rdfs:label "biodiversity conservation process" ;
+  skos:definition "A conservation process during which the variability of life - from genes to ecosystems - is preserved.." .
+
+ns1:ENVO_02500026
+  a owl:Class ;
+  rdfs:subClassOf cebp:ConservationStrategy ;
+  rdfs:comment "Relabel the obo foundry unique label to be generic process" ;
+  rdfs:label "anthropogenic modulatory intervention process" ;
+  skos:definition "A process during which humans apply technology to alter the magnitude, duration, rate, or impact of an environmental process." .
+
+dcterms:Agent
+  a owl:Class ;
+  owl:equivalentClass foaf:Agent ;
+  rdfs:subClassOf cebp:Actor .
+
+dcterms:alternative
+  a owl:Class ;
+  rdfs:subClassOf cebp:metadataCrosswalk .
+
+dcterms:contributor
+  a owl:Class ;
+  rdfs:subClassOf cebp:metadataCrosswalk ;
+  dcterms:description "The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.)." ;
+  rdfs:comment "Node", "Organization or Person" .
+
+dcterms:format
+  a owl:Class ;
+  rdfs:subClassOf cebp:metadataCrosswalk ;
+  dcterms:description "The file format of a downloadable resource from the endpointURL." ;
+  rdfs:comment "Resource", "annotation" .
+
+dcterms:rightsHolder
+  a owl:Class ;
+  rdfs:subClassOf cebp:IndigenousPartners, cebp:metadataCrosswalk ;
+  dcterms:description "The party holding the legal copyright to the Resource or Information." ;
+  rdfs:comment "Node", "Organization or Person" .
+
+bibo:bibo:uri
+  a owl:Class ;
+  rdfs:subClassOf cebp:metadataCrosswalk ;
+  dcterms:description "Uniform Resource Identifier for a globally unique ID for each node in the knowledge graphy (entity in the ontology). It is a unique sequence of characters that identifies an abstract or physical resource, such as resources on a webpage, mail address, phone number," ;
+  rdfs:comment "URL", "annotation" .
+
+
+<http://rs.tdwg.org/dwc/dwctype/Location>
+  a owl:Class ;
+  rdfs:subClassOf cebp:GeoLocation, ns1:BFO_0000006 ;
+  ns1:BCO_0000060 "location of an event"@en ;
+  ns1:IAO_0000114 ns1:IAO_0000123 ;
+  ns1:IAO_0000424 "The site  where a process occurs. In the context of Dawrin Core, this is generally where a specimen is collected, an organism is observed or a measurement is taken."@en .
+
+schema:Person
+  a owl:Class ;
+  owl:equivalentClass foaf:Person ;
+  rdfs:subClassOf <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+
+<http://w3id.org/vcb/fel#MetaphoricReference>
+  a owl:Class ;
+  rdfs:subClassOf cebp:Resources .
+
+rdfs:label
+  a owl:Class ;
+  rdfs:subClassOf cebp:metadataCrosswalk ;
+  rdfs:comment "Text", "annotation" ;
+  rdfs:label "rdfs:label" .
+
+<http://www.w3.org/2000/10/swap/pim/contact#Person>
+  a owl:Class ;
+  rdfs:subClassOf cebp:metadataCrosswalk, cebp:Actor, [
+    a owl:Restriction ;
+    owl:onProperty cebp:hasRole ;
+    owl:someValuesFrom cebp:Roles
+  ] ;
+  dcterms:description "An individual actor (human being)." ;
+  rdfs:label "Person" .
+
+skos:note
+  a owl:Class ;
+  rdfs:subClassOf cebp:metadataCrosswalk ;
+  dcterms:description "A general note, for any purpose." ;
+  rdfs:comment "Text", "annotation" .
+
+dcat:accessRights
+  a owl:Class ;
+  rdfs:subClassOf cebp:metadataCrosswalk ;
+  dcterms:description "The party holding the legal copyright to the Resource or Information." ;
+  rdfs:comment "Text", "annotation" .
+
+dcat:contactPoint
+  a owl:Class ;
+  rdfs:subClassOf cebp:metadataCrosswalk ;
+  dcterms:description "A contact point, e.g. email, telephone, address. These elements are listed all under this annotation property." ;
+  rdfs:comment "Resource", "annotation" .
+
+dcat:language
+  a owl:Class ;
+  rdfs:subClassOf cebp:metadataCrosswalk ;
+  dcterms:description "The language of the content or performance or used in an action.  Please use one of the language codes from the IETF BCP 47 standard." ;
+  rdfs:comment "Text", "annotation" .
+
+dcat:relation
+  a owl:Class ;
+  rdfs:subClassOf cebp:metadataCrosswalk ;
+  dcterms:description "Indicates that the Rersource contains a reference to, but is not necessarily about a concept." ;
+  rdfs:comment "Text", "annotation" .
+
+dcat:source
+  a owl:Class ;
+  rdfs:subClassOf cebp:metadataCrosswalk ;
+  dcterms:description "A Resource from which this work is derived or from which it is a modification or adaption." ;
+  rdfs:comment "Resource, Publication, URL", "annotation" .
+
+foaf:Agent
+  a owl:Class ;
+  rdfs:subClassOf cebp:metadataCrosswalk, cebp:Actor ;
+  rdfs:comment "An agent (eg. person, group, software or physical artifact)." ;
+  rdfs:label "Agent" ;
+  ns3:term_status "stable" .
+
+foaf:Document
+  a owl:Class ;
+  rdfs:subClassOf cebp:Resources ;
+  owl:disjointWith foaf:Organization ;
+  dc:creator "" ;
+  dc:keyword "" ;
+  dcterms:bibliographicCitation "" ;
+  dcterms:description "" ;
+  dcterms:license "" ;
+  dcterms:title "" ;
+  bibo:bibo:doi "" ;
+  rdfs:label "Document" ;
+  dcat:endpointURL "" .
+
+foaf:Organization
+  a owl:Class ;
+  rdfs:subClassOf cebp:metadataCrosswalk, cebp:Actor ;
+  owl:disjointWith foaf:Person ;
+  dcterms:description "An Actor that is neither a Consumer nor Producer, but an entity (e.g., University, nonprofit, non-governmental organization) participating in conservation, stewardship, and/or genomics-informed intervention efforts for the flourishing of species diversity, biodiversity, and socio-ecological systems." ;
+  rdfs:isDefinedBy foaf: ;
+  rdfs:label "Organization" .
+
+foaf:Person
+  a owl:Class ;
+  rdfs:subClassOf cebp:Actor .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource cebp:rightsHolder ;
+  owl:annotatedProperty skos:definition ;
+  owl:annotatedTarget """This term refers to the fact that Indigenous Peoples are “rights and title holders.”
+Indigenous Peoples’ constitutionally protected rights allow them to bind up a project in a legal process.
+Indigenous communities are not mere stakeholders, they are rights-holders.""" ;
+  dcterms:source "https://ipcaknowledgebasket.ca/resources/glossary/#" .
+# ALSO FLAGGING FOR WEIRD URI
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource cebp:SpeciesGenomicsData ;
+  owl:annotatedProperty ns0:scientificName ;
+  owl:annotatedTarget "" ;
+  rdfs:isDefinedBy """GoaT (https://goat.genomehubs.org/projects/CANBP)  metadata entity  scientific_name is pulled from a GET request: "https://goat.genomehubs.org/projects/CANBPemptyColumns=false&query=",
+"schema": "https://schema.org/",""" .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource cebp:SpeciesGenomicsData ;
+  owl:annotatedProperty ns0:taxonNameID ;
+  owl:annotatedTarget "" ;
+  rdfs:isDefinedBy "Defined by NCBI \"dwc:taxonNameID\". At Goat (https://goat.genomehubs.org/projects/CANBP) the metadata entity is  scientific_name. This should be expressed in the gem-know system as \"dwc:taxonNameID\"." .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource ns1:BFO_0000006 ;
+  owl:annotatedProperty ns1:IAO_0000116 ;
+  owl:annotatedTarget "Spatial region doesn't have a closure axiom because the subclasses don't exhaust all possibilites. An example would be the union of a spatial point and a spatial line that doesn't overlap the point, or two spatial lines that intersect at a single point. In both cases the resultant spatial region is neither 0-dimensional, 1-dimensional, 2-dimensional, or 3-dimensional."@en ;
+  ns1:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/0000002> ;
+  rdfs:comment "per discussion with Barry Smith" .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource ns1:BFO_0000006 ;
+  owl:annotatedProperty ns1:IAO_0000600 ;
+  owl:annotatedTarget "A spatial region is a continuant entity that is a continuant_part_of spaceR as defined relative to some frame R. (axiom label in BFO2 Reference: [035-001])"@en ;
+  ns1:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/035-001> .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource ns1:BFO_0000006 ;
+  owl:annotatedProperty ns1:IAO_0000601 ;
+  owl:annotatedTarget "All continuant parts of spatial regions are spatial regions. (axiom label in BFO2 Reference: [036-001])"@en ;
+  ns1:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/036-001> .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource ns1:BFO_0000006 ;
+  owl:annotatedProperty ns1:IAO_0000602 ;
+  owl:annotatedTarget "(forall (x y t) (if (and (SpatialRegion x) (continuantPartOfAt y x t)) (SpatialRegion y))) // axiom label in BFO2 CLIF: [036-001] " ;
+  ns1:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/036-001> .
+
+[]
+  a owl:Axiom ;
+  owl:annotatedSource ns1:BFO_0000006 ;
+  owl:annotatedProperty ns1:IAO_0000602 ;
+  owl:annotatedTarget "(forall (x) (if (SpatialRegion x) (Continuant x))) // axiom label in BFO2 CLIF: [035-001] " ;
+  ns1:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/035-001> .
+
+# Shouldn't declare external term
