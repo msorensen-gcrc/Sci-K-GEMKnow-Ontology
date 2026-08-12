@@ -14,14 +14,14 @@
 
 <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/> 
   a owl:Ontology ;
-  owl:versionInfo "0.4.0" ;
-  owl:versionIRI <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/0.4.0> ;
+  owl:versionInfo "0.6.0" ;
+  owl:versionIRI <http://gcrc.carleton.ca/ontologies/2023/GCRC_CEBP_Genome_Architecture/0.6.0> ;
   dcterms:title "CEBP GEM-Know Ontology"@en ;
-  rdfs:comment "Conceptual model for the Genomic Environmental Mobilization Knowledge Network (GEM-Know), developed at the Geomatics and Cartographic Research Centre, Carleton University."@en ;
+  dcterms:description "Conceptual model for the Genomic Environmental Mobilization Knowledge Network (GEM-Know), developed at the Geomatics and Cartographic Research Centre, Carleton University."@en ;
   dcterms:creator "Geomatics and Cartographic Research Centre (GCRC), Carleton University" ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:created "2023-01-01"^^xsd:date ;
-  dcterms:modified "2026-06-04"^^xsd:date .
+  dcterms:modified "2026-07-08"^^xsd:date .
 
 
 # NOTE A LOT OF THINGS NEED RDFS:LABEL and COMMENT!!!!
@@ -53,23 +53,28 @@ cebp:informs
   owl:inverseOf cebp:isInformedBy ;
   # SHACL-MAP: ConservationEvaluation->ConservationStrategy; ConservationStrategy->ConservationEvaluation;
   #            InuitQaujimajatugangit->ConservationStrategy; SocialEcology->EnvironmentalGovernance;
-  #            Actor->ConservationPolicyFramework
+  #            Actor->ConservationPolicyFramework;
+  #            ConservationStrategy->ConservationFramework (v21);
+  #            IndigenousConservationConcept->ConservationStrategy (v21);
+  #            IndigenousConservationConcept->SocialEcology (v21);
+  #            SocialEcology->CommunityBasedMonitoring (v21);
+  #            Actor->ConservationFramework (v21)
   rdfs:domain [
     a owl:Class ;
-    owl:unionOf ( cebp:ConservationEvaluation cebp:ConservationStrategy cebp:InuitQaujimajatugangit cebp:SocialEcology cebp:Actor )
+    owl:unionOf ( cebp:ConservationEvaluation cebp:ConservationStrategy cebp:InuitQaujimajatugangit cebp:SocialEcology cebp:Actor cebp:IndigenousConservationConcept )
   ] ;
   rdfs:range [
     a owl:Class ;
-    owl:unionOf ( cebp:ConservationStrategy cebp:ConservationEvaluation cebp:EnvironmentalGovernance cebp:ConservationPolicyFramework )
+    owl:unionOf ( cebp:ConservationStrategy cebp:ConservationEvaluation cebp:EnvironmentalGovernance cebp:ConservationPolicyFramework cebp:ConservationFramework cebp:SocialEcology cebp:CommunityBasedMonitoring )
   ] .
 
 cebp:isApplicationOf
   a owl:ObjectProperty ;
   rdfs:label "is application of"@en ;
   rdfs:comment "Demonstrates an explicit real life use case of Concept B through Concept A. For example, 'whole genome sequencing is (an) application of SNP.'"@en ; #This may need to be double checked. Also I'm not entirely sure the domain is right for the name of this object property/predicate.
-  # SHACL-MAP: GenomicsMethod->GenomicsTools
+  # SHACL-MAP: GenomicsMethod->GenomicsTool
   rdfs:domain cebp:GenomicsMethod ;
-  rdfs:range cebp:GenomicsTools .
+  rdfs:range cebp:GenomicsTool .
 
 cebp:isProvidedBy
   a owl:ObjectProperty ;
@@ -84,24 +89,27 @@ cebp:isProvidedBy
 cebp:isRepresentativeOf a owl:ObjectProperty ;
   rdfs:label "is representative of"@en ;
   rdfs:comment "Connects a group or an individual (Concept A) with the larger group or organization (Concept B) that they speak on behalf of. For example 'Christy the conservation manager is (the) representative of Algonquin Park.'"@en ;
+  # SHACL-MAP: FirstNationsCommunity->IndigenousTerritory; IndigenousCouncil->IndigenousTerritory;
+  #            ConservationManager->NationalMarineConservationArea; ConservationManager->ProvincialPark;
+  #            ConservationManager->ParksCanada (v21)
   rdfs:domain [
     a owl:Class ;
-    owl:unionOf ( cebp:FirstNationsCommunities cebp:ConservationManager cebp:IndigenousCouncil) 
+    owl:unionOf ( cebp:FirstNationsCommunity cebp:ConservationManager cebp:IndigenousCouncil) 
   ] ;
   rdfs:range [
     a owl:Class ;
-    owl:unionOf ( cebp:IndigenousTerritory cebp:NationalMarineConservationArea cebp:ProvincialPark ) 
+    owl:unionOf ( cebp:IndigenousTerritory cebp:NationalMarineConservationArea cebp:ProvincialPark cebp:ParksCanada ) 
   ] .
 
 cebp:makesAssessmentsOf
   a owl:ObjectProperty ;
-  # SHACL-MAP: Consumers->ConservationEvaluation; Consumers->ConservationGenomicsProcess;
-  #            Consumers->ConservationStrategy; Producers->SpeciesGenomicsData
+  # SHACL-MAP: Consumer->ConservationEvaluation; Consumer->ConservationGenomicsProcess;
+  #            Consumer->ConservationStrategy; Producer->SpeciesGenomicsData
   rdfs:label "makes assessments of"@en ;
   rdfs:comment "Declares Concept A as the person or group who is evaluating Concept B. For example, 'Mako the consumer makes assessment of habitat restoration.'"@en ;
   rdfs:domain [
     a owl:Class ;
-    owl:unionOf ( cebp:Consumers cebp:Producers )
+    owl:unionOf ( cebp:Consumer cebp:Producer )
   ] ;
   rdfs:range [
     a owl:Class ;
@@ -110,12 +118,12 @@ cebp:makesAssessmentsOf
 
 cebp:collaborativelyImplements
   a owl:ObjectProperty ;
-  # SHACL-MAP: Consumers->ConservationStrategy; Producers->ConservationStrategy; WorkingGroup->ConservationStrategy
+  # SHACL-MAP: Consumer->ConservationStrategy; Producer->ConservationStrategy; WorkingGroup->ConservationStrategy
   rdfs:label "collaboratively implements"@en ;
   rdfs:comment "Declares Concept A as the person or group that is contributing to carrying out Concept B. For example, 'The GCRC collaboratively implements habitat restoration.'"@en ;
   rdfs:domain [
     a owl:Class ;
-    owl:unionOf ( cebp:Consumers cebp:Producers cebp:WorkingGroup )
+    owl:unionOf ( cebp:Consumer cebp:Producer cebp:WorkingGroup )
   ] ;
   rdfs:range cebp:ConservationStrategy .
 
@@ -132,17 +140,18 @@ cebp:describes
 
 cebp:hasExpertise a owl:ObjectProperty ;
   rdfs:label "has expertise"@en ;
-  rdfs:comment "Declares Concept A as having knowledge and/or experience in Concept B. For example, 'Mako has expertise (in) habitat renewal.'"@en .
+  rdfs:comment "Declares person A as having knowledge and/or experience in Concept B. For example, 'Mako has expertise (in) habitat renewal.'"@en ;
+  rdfs:domain cebp:Actor . #TO DO will add the range for the this property later.
 
 cebp:hasKeyword
   a owl:ObjectProperty ;
-  # SHACL-MAP: IndigenousPersonaResources->SocialEcology; Resources->ConservationStrategy;
-  #            Resources->GenomicsMethod; Resources->GenomicsTerm
+  # SHACL-MAP: IndigenousPersonaResource->SocialEcology; Resource->ConservationStrategy;
+  #            Resource->GenomicsMethod; Resource->GenomicsTerm
   rdfs:label "has keyword"@en ;
   rdfs:comment "Declares Concept A as having a term that is a type of Concept B. For example, '(The) 2024 Muskox Report has keyword qPCR.'"@en ;
   rdfs:domain [
     a owl:Class ;
-    owl:unionOf ( cebp:IndigenousPersonaResources cebp:Resources )
+    owl:unionOf ( cebp:IndigenousPersonaResource cebp:Resource )
   ] ;
   rdfs:range [
     a owl:Class ;
@@ -150,11 +159,18 @@ cebp:hasKeyword
   ] .
 cebp:hasLocation a owl:ObjectProperty ;
   rdfs:label "has location"@en ;
-  rdfs:comment "Declares Concept A as being found in the region identified by Concept B. For example, 'Algonquin Park has location 45.8372° N, 78.3791° W.'"@en .
+  rdfs:comment "Declares Concept A as being found in the region identified by Concept B. For example, 'Algonquin Park has location 45.8372° N, 78.3791° W.'"@en ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf ( cebp:ProvincialPark cebp:IndigenousCommunity )
+  ] . # I think this property needs to be clarified for me
 
 cebp:hasRole a owl:ObjectProperty ;
   rdfs:label "has role"@en ;
-  rdfs:comment "Declares Concept A as having the job/responsibility of Concept B. For example, 'Mako has role Software Developer.'"@en .
+  rdfs:comment "Declares Concept A as having the job/responsibility of Concept B. For example, 'Mako has role Software Developer.'"@en ;
+  # SHACL-MAP: foaf:Person->Role (v21)
+  rdfs:domain foaf:Person ;
+  rdfs:range cebp:Role .
 
 # TODO STEP 7: cebp:isA collides conceptually with rdf:type and must be resolved
 # (either removed in favour of rdf:type or renamed to a domain-specific term).
@@ -174,13 +190,13 @@ cebp:isInformedBy
   a owl:ObjectProperty ;
   # SHACL-MAP: OnlineGenomicsCourse->GenomicsMethod; ConservationPolicyFramework->InuitQaujimajatugangit;
   #            ConservationPolicyFramework->SocialEcology; GenomicsMethod->OnlineGenomicsCourse;
-  #            CollaborativeConservationFrameworks->InuitQaujimajatugangit;
-  #            CollaborativeConservationFrameworks->SocialEcology
+  #            CollaborativeConservationFramework->InuitQaujimajatugangit;
+  #            CollaborativeConservationFramework->SocialEcology
   rdfs:label "is informed by"@en ;
   rdfs:comment "This is the opposite of the object property cebp:informs. Identifies two concepts where Concept A is actively explained by or  concept B. For example, 'local policy is informed by local policy.'"@en ;
   rdfs:domain [
     a owl:Class ;
-    owl:unionOf ( cebp:OnlineGenomicsCourse cebp:ConservationPolicyFramework cebp:GenomicsMethod cebp:CollaborativeConservationFrameworks )
+    owl:unionOf ( cebp:OnlineGenomicsCourse cebp:ConservationPolicyFramework cebp:GenomicsMethod cebp:CollaborativeConservationFramework )
   ] ;
   rdfs:range [
     a owl:Class ;
@@ -188,29 +204,50 @@ cebp:isInformedBy
   ] .
 cebp:isMeasuredBy a owl:ObjectProperty ;
   rdfs:label "is measured by"@en ;
-  rdfs:comment "Defines Concept A as something that is being observed or calculated by Concept B."@en .
+  rdfs:comment "Defines Concept A as something that is being observed or calculated by Concept B."@en ;
+  rdfs:domain cebp:BiogenomeDataAndProcess ;
+  rdfs:range cebp:GenomicsTool .
 
 cebp:isPartOf
   a owl:ObjectProperty, owl:TransitiveProperty ;
   rdfs:label "is part of"@en ;
   rdfs:comment "Indicates that Concept A belongs to the larger or broader group/category which is Concept B. For example, 'Mako is part of GCRC.'"@en ; 
-  # SHACL-MAP: ExSituBiologist->WorkingGroup; GenomicsMethod->ConservationStrategy
+  # SHACL-MAP: ExSituBiologist->WorkingGroup; GenomicsMethod->ConservationStrategy;
+  #            SubsistencePractice->HistoricalRelationshipWithLand (added from June30 Christy version);
+  #            Environment->SocialEcology (v21); Species->ConservationStrategy (v21);
+  #            Species->SocialEcology (v21); Actor->SocialEcology (v21)
   rdfs:domain [
     a owl:Class ;
-    owl:unionOf ( cebp:ExSituBiologist cebp:GenomicsMethod )
+    owl:unionOf ( cebp:ExSituBiologist cebp:GenomicsMethod cebp:SubsistencePractice cebp:Environment cebp:Species cebp:Actor )
   ] ;
   rdfs:range [
     a owl:Class ;
-    owl:unionOf ( cebp:WorkingGroup cebp:ConservationStrategy )
+    owl:unionOf ( cebp:WorkingGroup cebp:ConservationStrategy cebp:HistoricalRelationshipWithLand cebp:SocialEcology )
   ] .
 
 cebp:isUsefulFor a owl:ObjectProperty ;
   rdfs:label "is useful for"@en ;
-  rdfs:comment "Indicates that Concept A is well suited for Concept B. For example, 'qPCR is useful for whole genome sequencing.'"@en .
+  rdfs:comment "Indicates that Concept A is well suited for Concept B. For example, 'qPCR is useful for whole genome sequencing.'"@en ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf ( cebp:ConservationStrategy cebp:GenomicsMethod cebp:GenomicsTool )
+  ] ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf ( cebp:ConservationEvaluation cebp:BiogenomeDataAndProcess ) 
+  ] .
 
 cebp:occurrenceDeterminedBy a owl:ObjectProperty ;
   rdfs:label "occurrence determined by"@en ;
-  rdfs:comment "Indicates that Concept B is the origin for Concept A. For example, 'warmer winters (is an) occurrence determined by climate change.'"@en .
+  rdfs:comment "Indicates that Concept B is the origin for Concept A. For example, 'warmer winters (is an) occurrence determined by climate change.'"@en ;
+  rdfs:domain [ 
+    a owl:Class ;
+    owl:unionOf ( cebp:Species cebp:BiogenomeDataAndProcess cebp:Environment )
+  ] ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf ( cebp:ConservationStrategy cebp:GenomicsMethod)
+  ] .
 
 cebp:provides
   a owl:ObjectProperty ;
@@ -226,7 +263,9 @@ cebp:translatedAs a owl:ObjectProperty ;
 
 cebp:usedToAssess a owl:ObjectProperty ;
   rdfs:label "used to assess"@en ;
-  rdfs:comment "Indicates Concept A is a method to validate Concept B. For example, 'water temperature (is) used to assess climate change.'"@en .
+  rdfs:comment "Indicates Concept A is a method to validate Concept B. For example, 'water temperature (is) used to assess climate change.'"@en ;
+  rdfs:domain cebp:GenomicsTool ;
+  rdfs:range cebp:GenomicsMethod .
 
 cebp:isExampleOf a owl:ObjectProperty ;
   rdfs:label "is example of"@en ;
@@ -238,15 +277,15 @@ cebp:ClimateChangePolicy
   rdfs:subClassOf cebp:ConservationPolicyFramework ;
   rdfs:comment ""@en . #NEEDS COMMENT!!
 
-cebp:FirstNationsCommunities a owl:Class ;
-  rdfs:label "First Nations Communities"@en ; #Do we want this as 'Communities' (plural) or 'Community' (singular) - especially considering it's a subset of IndigenousCommunity (singular) 
+cebp:FirstNationsCommunity a owl:Class ;
+  rdfs:label "First Nations Community"@en ; 
   rdfs:comment ""@en ; #NEEDS COMMENT!!
   rdfs:subClassOf cebp:IndigenousCommunity .
 
 
-cebp:GenomicsTrainingResources
+cebp:GenomicsTrainingResource
   a owl:Class ;
-  rdfs:label "Genomics Training Resources"@en ;
+  rdfs:label "Genomics Training Resource"@en ;
   rdfs:comment ""@en ;
   rdfs:subClassOf cebp:DataProcessingAndEducation .
 
@@ -256,9 +295,9 @@ cebp:NationalMarineConservationArea
   rdfs:comment ""@en ;
   rdfs:subClassOf cebp:Geolocation .
 
-cebp:NorthernIndigenousCommunities # Changed the spelling from Indigneous to proper spelling of Indigenous.
+cebp:NorthernIndigenousCommunity # Changed the spelling from Indigneous to proper spelling of Indigenous.
   a owl:Class ;
-  rdfs:label "Northern Indigenous Communities"@en ;
+  rdfs:label "Northern Indigenous Community"@en ;
   rdfs:comment ""@en ;
   rdfs:subClassOf cebp:IndigenousCommunity .
 
@@ -266,7 +305,7 @@ cebp:OnlineGenomicsCourse
   a owl:Class ;
   rdfs:label "Online Genomics Course"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:GenomicsTools .
+  rdfs:subClassOf cebp:GenomicsTool .
 
 cebp:ProvincialPark
   a owl:Class ;
@@ -286,13 +325,13 @@ cebp:AcademicInstitution
   a owl:Class ;
   rdfs:label "Academic Institution"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Producers .
+  rdfs:subClassOf cebp:Producer .
 
 cebp:BiogenomeDataAndProcess
   a owl:Class ;
   rdfs:label "Biogenome Data And Process"@en ;
-  rdfs:comment "Canada BioGenome Project (www.biogenome.ca), which has the aim of producing annotated genomes for approximately 400 Canadian species that are of cultural, conservation, scientific, and/or economic significance. Having a reference genome available increases the opportunities to incorporate genomic data into Species conservation."@en ;
-  rdfs:isDefinedBy "Species of interest within the scope of the CEBP and the genomics data acquired through the CEBP for distribution and use - types of species and types of databases belong in this Class."@en .
+  rdfs:comment "Canada BioGenome Project (www.biogenome.ca), which has the aim of producing annotated genomes for approximately 400 Canadian species that are of cultural, conservation, scientific, and/or economic significance. Having a reference genome available increases the opportunities to incorporate genomic data into Species conservation."@en .
+
 
 cebp:CommitteeMember
   a owl:Class ;
@@ -308,7 +347,7 @@ cebp:CommunityScholar
 
 cebp:Company
   a owl:Class ;
-  rdfs:subClassOf cebp:Consumers, cebp:Actor ;
+  rdfs:subClassOf cebp:Consumer, cebp:Actor ;
   rdfs:comment "An Actor that is neither a Consumer nor Producer, but a grop, typically for-proft, working toward conservation, stewardship, and/or genomics-informed interventions for the flourishing of species diversity, biodiversity, and socio-ecological systems."@en ;
   rdfs:label "Company" .
 
@@ -321,20 +360,14 @@ cebp:ConservationArea
 cebp:ConservationEvaluation
   a owl:Class ;
   rdfs:label "Conservation Evaluation"@en ;
-  # Must discuss to address what is being attempted here.
-  # rdfs:subClassOf [
-  #   a owl:Restriction ;
-  #   owl:onProperty cebp:isAkeyword ;
-  #   owl:hasSelf true
-  # ] ;
   rdfs:comment "Active interpretative processes and methodologies for evaluating wildlife for purposes of conservation, typically referring to populations. May or may no be related to genomics-informed assessments"@en ;
   # owl:sameAs "genomics-informed conservation approaches" ; Don't really know what this is supposed to be - owl:sameAs should be connecting IRIs not text.
-  skos:altLabel "Genomics Applications" .
+  skos:altLabel "Genomics Application" .
 
 cebp:ConservationManager a owl:Class ;
   rdfs:label "Conservation Manager"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Consumers ;
+  rdfs:subClassOf cebp:Consumer ;
   skos:altLabel "ConservationBiologist", "ConservationScientist", "ConservationZoologist", "Wildlife Biiologist", "Zoologist" .
 
 cebp:ConservationPolicy
@@ -347,26 +380,19 @@ cebp:ConservationPolicy
 cebp:ConservationPolicyFramework
   a owl:Class ;
   rdfs:label "Conservation Policy Framework"@en ;
-  rdfs:subClassOf cebp:ConservationFrameworks ;
-  rdfs:comment "Conservation Policy refers to nature or wildlife conservation, management or stewardship policies. This includes governmental or organizational strategies aimed at protecting natural areas and species through measures such as land acquisition, management planning, and incentivizing ownership changes within protected areas, as well as governmental, organizational, Indigenous, or other bodies."@en ;
-  rdfs:label "Conservation Policy Frameworks"@en .
+  rdfs:subClassOf cebp:ConservationFramework ;
+  rdfs:comment "Conservation Policy refers to nature or wildlife conservation, management or stewardship policies. This includes governmental or organizational strategies aimed at protecting natural areas and species through measures such as land acquisition, management planning, and incentivizing ownership changes within protected areas, as well as governmental, organizational, Indigenous, or other bodies."@en .
 
 cebp:ConservationStrategy
   a owl:Class ;
   rdfs:label "Conservation Strategy"@en ;
   rdfs:comment ""@en . #NEEDS COMMENT!!
-  # Must discuss to address what is being attempted here.
-  # rdfs:subClassOf [
-  #   a owl:Restriction ;
-  #   owl:onProperty cebp:isAkeyword ;
-  #   owl:hasSelf true
-  # ] .
 
-cebp:Consumers
+cebp:Consumer
   a owl:Class ;
-  rdfs:subClassOf cebp:Roles ;
+  rdfs:subClassOf cebp:Role ;
   rdfs:comment "An actor (e.g., researcher, application, or system) that uses the CEBP data, systems, tools, and ontologies to gain insights, build other systems, or work toward conservation, stewardship, and/or genomics-informed interventions for the flourishing of species diversity, biodiversity, and socio-ecological systems."@en ;
-  rdfs:label "Consumers"@en .
+  rdfs:label "Consumer"@en .
 
 cebp:ContentTranslation
   a owl:Class ;
@@ -398,28 +424,22 @@ cebp:ExSituBiologist
   a owl:Class ;
   rdfs:label "Ex-Situ Biologist"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Producers .
+  rdfs:subClassOf cebp:Producer .
 
 cebp:GenomicsDataValidation 
   a owl:Class ;
   rdfs:label "Genomics Data Validation"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!;
-  rdfs:subClassOf cebp:Producers .
+  rdfs:subClassOf cebp:Producer .
 
 cebp:GenomicsExpert
   a owl:Class ;
   rdfs:label "Genomics Expert"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!;
-  rdfs:subClassOf cebp:Producers .
+  rdfs:subClassOf cebp:Producer .
 
 cebp:GenomicsMethod
   a owl:Class ;
-  # Must discuss to address what is being attempted here.
-  # rdfs:subClassOf [
-  #   a owl:Restriction ;
-  #   owl:onProperty cebp:isAkeyword ;
-  #   owl:hasSelf true
-  # ] ;
   rdfs:label "Genomics Method"@en ;
   rdfs:comment ""@en . #NEEDS COMMENT!!
 
@@ -427,41 +447,34 @@ cebp:GenomicsServiceProvider
   a owl:Class ;
   rdfs:label "Genomics Service Provider"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!;
-  rdfs:subClassOf cebp:Producers .
+  rdfs:subClassOf cebp:Producer .
 
 cebp:GenomicsTerm
   a owl:Class ;
   rdfs:label "Genomics Term"@en ;
   rdfs:comment ""@en . #NEEDS COMMENT!!
-  # Must discuss to address what is being attempted here.
-  # rdfs:subClassOf [
-  #   a owl:Restriction ;
-  #   owl:onProperty cebp:isAkeyword ;
-  #   owl:hasSelf true
-  # ] .
 
 cebp:GenomicsToolkitDeveloper
   a owl:Class ;
   rdfs:label "Genomics Tookit Developer"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Producers .
+  rdfs:subClassOf cebp:Producer .
 
-cebp:GenomicsTools a owl:Class ;
-  rdfs:label "Genomics Tools"@en ;
+cebp:GenomicsTool a owl:Class ;
+  rdfs:label "Genomics Tool"@en ;
   rdfs:comment ""@en . #NEEDS COMMENT!!
 
 cebp:Geolocation
   a owl:Class ;
   rdfs:label "Geolocation"@en ;
-  rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:comment "Node" ;
-  rdfs:isDefinedBy "Placename in text. Natural language text name. To be used with the predicate \"hasLocation\""@en .
+  rdfs:comment ""@en ; #NEEDS COMMENT!! Is this a more coordinate based location system? How is this different than Location?
+  rdfs:comment "Placename in text. Natural language text name. To be used with the predicate \"hasLocation\""@en .
 
 cebp:Government
   a owl:Class ;
   rdfs:label "Government"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Consumers .
+  rdfs:subClassOf cebp:Consumer .
 
 cebp:HTO
   a owl:Class ;
@@ -497,19 +510,19 @@ cebp:IndigenousOrganization
   a owl:Class ;
   rdfs:label "Indigenous Organization"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Consumers .
+  rdfs:subClassOf cebp:Consumer .
 
 cebp:IndigenousPartner 
   a owl:Class ;
   rdfs:label "Indigenous Partner"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Consumers, cebp:Producers .
+  rdfs:subClassOf cebp:Consumer, cebp:Producer .
 
-cebp:IndigenousPersonaResources
+cebp:IndigenousPersonaResource
   a owl:Class ;
-  rdfs:label "Indigenous Persona Resources"@en ;
+  rdfs:label "Indigenous Persona Resource"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Resources .
+  rdfs:subClassOf cebp:Resource .
 
 cebp:IndigenousTerritory
   a owl:Class ;
@@ -517,9 +530,9 @@ cebp:IndigenousTerritory
   rdfs:comment ""@en ; #NEEDS COMMENT!!
   rdfs:subClassOf cebp:Geolocation .
 
-cebp:InuitCommunities
+cebp:InuitCommunity
   a owl:Class ;
-  rdfs:label "Inuit Communities"@en ;
+  rdfs:label "Inuit Community"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
   rdfs:subClassOf cebp:IndigenousCommunity .
 
@@ -540,16 +553,16 @@ cebp:LANGUAGECODE
   rdfs:subClassOf cebp:metadataCrosswalk ;
   rdfs:comment "Text", "annotation", "e.g., \"en\" for English; \"iu\" for Inuktitut" .
 
-cebp:LandStewards
+cebp:LandSteward
   a owl:Class ;
-  rdfs:label "Land Stewards"@en ;
+  rdfs:label "Land Steward"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Consumers .
+  rdfs:subClassOf cebp:Consumer .
 
 cebp:Location
   a owl:Class ;
   rdfs:label "Location"@en ;
-  rdfs:comment ""@en ; #NEEDS COMMENT!!
+  rdfs:comment ""@en ; #NEEDS COMMENT!! Also is this more conceptual vs. Geolocation being an actual coordinate based location? How is this different than Geolocation?
   skos:exactMatch dwc:Location ;
   rdfs:subClassOf cebp:Geolocation .
 
@@ -557,13 +570,13 @@ cebp:NGO
   a owl:Class ;
   rdfs:label "Non-Governmental Organization"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Consumers .
+  rdfs:subClassOf cebp:Consumer .
 
-cebp:Producers
+cebp:Producer
   a owl:Class ;
-  rdfs:subClassOf cebp:Roles ;
+  rdfs:subClassOf cebp:Role ;
   rdfs:comment "An actor (e.g., researcher, application, or system) that provides resources (e.g., genomics knowledge, data, or tools) for discovery in the CEBP to gain insights, build other systems, or work toward conservation, stewardship, and/or genomics-informed interventions for the flourishing of species diversity, biodiversity, and socio-ecological systems."@en ;
-  rdfs:label "Producers"@en .
+  rdfs:label "Producer"@en .
 
 cebp:ReferenceGenome
   a owl:Class ;
@@ -575,19 +588,19 @@ cebp:ResearchInstitution
   a owl:Class ;
   rdfs:label "Research Institute"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Roles .
+  rdfs:subClassOf cebp:Role .
 
 cebp:Researcher
   a owl:Class ;
   rdfs:label "Researcher"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Producers .
+  rdfs:subClassOf cebp:Producer .
 
-cebp:Roles
+cebp:Role
   a owl:Class ;
   rdfs:subClassOf cebp:Actor ;
   rdfs:comment "The contextual properties or behavior of an entity (i.e., Actor) when it participates in a relation or activity."@en ;
-  rdfs:label "Roles"@en .
+  rdfs:label "Role"@en .
 
 cebp:SampleCollection
   a owl:Class ;
@@ -595,17 +608,17 @@ cebp:SampleCollection
   rdfs:comment ""@en ; #NEEDS COMMENT!!
   rdfs:subClassOf cebp:BiogenomeDataAndProcess .
 
-cebp:SciencePolicyExperts
+cebp:SciencePolicyExpert
   a owl:Class ;
-  rdfs:label "Science Policy Experts"@en ;
+  rdfs:label "Science Policy Expert"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
   rdfs:subClassOf cebp:Committee .
 
-cebp:ScientistPersonaResources
+cebp:ScientistPersonaResource
   a owl:Class ;
-  rdfs:label "Scientist Persona Resources"@en ;
+  rdfs:label "Scientist Persona Resource"@en ;
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Resources .
+  rdfs:subClassOf cebp:Resource .
 
 cebp:SpatialRegion
   a owl:Class ;
@@ -629,7 +642,7 @@ cebp:SpeciesGenomicsData
 cebp:WorkingGroup
   a owl:Class ;
   rdfs:label "Working Group"@en ;
-  rdfs:subClassOf cebp:Consumers ;
+  rdfs:subClassOf cebp:Consumer ;
   rdfs:comment """Working Group Objectives (example):
 1. Provide a mechanism for networking and collaboration among
 diverse interests in the conservation of a species.
@@ -648,12 +661,6 @@ cebp:Application
   a owl:Class ;
   rdfs:label "Application"@en ;
   rdfs:subClassOf cebp:ContentTranslation ;
-  # Must discuss to address what is being attempted here.
-  # rdfs:subClassOf [
-  #   a owl:Restriction ;
-  #   owl:onProperty cebp:isAkeyword ;
-  #   owl:hasSelf true
-  # ] ;
   rdfs:comment "Class to categorize \"applications\" resources for the Science Translator site page."@en .
 
 cebp:CanadianGovernment
@@ -662,10 +669,10 @@ cebp:CanadianGovernment
   rdfs:label "Canadian Government"@en ; 
   rdfs:comment ""@en .
 
-cebp:CollaborativeConservationFrameworks
+cebp:CollaborativeConservationFramework
   a owl:Class ;
-  rdfs:label "Collaborative Conservation Frameworks"@en ; 
-  rdfs:subClassOf cebp:ConservationFrameworks ;
+  rdfs:label "Collaborative Conservation Framework"@en ; 
+  rdfs:subClassOf cebp:ConservationFramework ;
   rdfs:comment """To support conditions for effective, sustained,
 and equitable collaborations across relevant sectors and interests, we propose an integrated frame-work (Fig. 3) that includes three key dimensions, namely: (i) holistic worldviews and perspectives, (ii) capacity development opportunities, and (iii) dedicated structural supports (e.g., funding and resources, leadership) (Bowen and Ebi 2015; Meissner 2018; Cooke et al. 2020).
 
@@ -735,9 +742,9 @@ cebp:GovernmentAgency
   rdfs:comment ""@en ;
   rdfs:subClassOf cebp:Government .
 
-cebp:Indicators
+cebp:Indicator
   a owl:Class ;
-  rdfs:label "Indicators"@en ; 
+  rdfs:label "Indicator"@en ; 
   rdfs:comment ""@en ; #NEEDS COMMENT!!
   rdfs:subClassOf cebp:ConservationGenomicsProcess .
 
@@ -748,7 +755,7 @@ cebp:metadataCrosswalk
 Connected via owl:sameAs predicate."""@en ;
   rdfs:label "Metadata Crosswalk" .
 
-cebp:ProvincalGovernment
+cebp:ProvincialGovernment
   a owl:Class ;
   rdfs:subClassOf cebp:CanadianGovernment ;
   rdfs:label "Provincial Government" ;
@@ -764,12 +771,6 @@ cebp:UseCase
   a owl:Class ;
   rdfs:label "Use Case"@en ; 
   rdfs:subClassOf cebp:ContentTranslation ;
-  # Must discuss to address what is being attempted here.
-  # rdfs:subClassOf [
-  #   a owl:Restriction ;
-  #   owl:onProperty cebp:isAkeyword ;
-  #   owl:hasSelf true
-  # ] ;
   rdfs:comment "Class to categorize \"use case\" resources for the Science Translator site page."@en .
 
 cebp:ConservationGenomicsProcess
@@ -798,9 +799,9 @@ In addition, Inuit Elders identified six guiding principles (Nunavut Tunngavik I
 ᖃᓄᖅᑑᕐᓂᖅ — Qanuqtuurniq: Being innovative and resourceful.
 ᐊᕙᑎᑦᑎᓐᓂᒃ ᑲᒪᑦᓯᐊᕐᓂᖅ — Avatittinnik Kamatsiarniq: Respect and care for the land, animals, and the environment."""@en .
 
-cebp:RecoveryActions
+cebp:RecoveryAction
   a owl:Class ;
-  rdfs:label "Recovery Actions"@en ; 
+  rdfs:label "Recovery Action"@en ; 
   rdfs:comment ""@en ; #NEEDS COMMENT!!
   rdfs:subClassOf obo:ENVO_01001171 ;
   skos:definition "as specifically related to MRS recovery actions; the conservation frameworks that the decision tree is built on" .
@@ -821,25 +822,25 @@ cebp:Committee
   rdfs:comment "An Actor that is neither a Consumer nor Producer, but a coalition or group working toward conservation, stewardship, and/or genomics-informed interventions for the flourishing of species diversity, biodiversity, and socio-ecological systems."@en ;
   rdfs:label "Committee"@en .
 
-cebp:ConservationFrameworks a owl:Class ;
-  rdfs:label "Conservation Frameworks"@en ; #Should be singular
+cebp:ConservationFramework a owl:Class ;
+  rdfs:label "Conservation Framework"@en ; #Should be singular
   rdfs:comment ""@en . #NEEDS COMMENT!!
 
 cebp:DataProcessingAndEducation
   a owl:Class ;
   rdfs:label "Data Processing and Education"@en ; 
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Resources .
+  rdfs:subClassOf cebp:Resource .
 
-cebp:GenomeProjects
+cebp:GenomeProject
   a owl:Class ;
-  rdfs:label "Genome Projects"@en ; #Should be singular
+  rdfs:label "Genome Project"@en ; #Should be singular
   rdfs:comment ""@en ; #NEEDS COMMENT!!
-  rdfs:subClassOf cebp:Producers .
+  rdfs:subClassOf cebp:Producer .
 
-cebp:Resources
+cebp:Resource
   a owl:Class ;
-  rdfs:label "Resources"@en ; #Should be singular
+  rdfs:label "Resource"@en ; #Should be singular
   rdfs:comment """Note that in the gemknow graph database system uses Neo4j software, which doesn’t allow two properties (e.g., Annotation Properties) to have the same name. If more than one annotation property of the same name is needed, this system  stores them as arrays. This storage solution is JSON-LD compliant. Example:
 
   "@context": {
@@ -859,3 +860,137 @@ cebp:EntityContext
   rdfs:subClassOf cebp:metadataCrosswalk ;
   rdfs:label "Entity Context"@en ;
   rdfs:comment ""@en . #NEEDS COMMENT!!
+# =============================================================================
+# ADDITIONS FOLDED IN FROM CHRISTY'S June30-2026 VERSION
+# Adapted to current naming (singular) and style conventions:
+#   - owl:someValuesFrom restrictions converted to domain/range with SHACL-MAP notes
+#   - raw paper-quote "descriptions" converted to rdfs:comment; citations to dcterms:source
+#   - CamelCase fixed (communityBasedMonitoring -> CommunityBasedMonitoring)
+#   - dropped "Provincal" (misspelled duplicate of existing ProvincialGovernment)
+#   - IndigenousConservationConcept re-parented (was subClassOf Actor, which is a
+#     miscategorization — a concept is not an actor). 
+# =============================================================================
+
+cebp:IndigenousConservationConcept a owl:Class ;
+  rdfs:label "Indigenous Conservation Concept"@en ;
+  rdfs:comment "" . #NEEDS COMMENT!! 
+
+cebp:CulturalPractice a owl:Class ;
+  rdfs:label "Cultural Practice"@en ;
+  rdfs:comment "" ; #NEEDS COMMENT!!
+  rdfs:subClassOf cebp:IndigenousConservationConcept .
+
+cebp:HistoricalRelationshipWithLand a owl:Class ;
+  rdfs:label "Historical Relationship With Land"@en ;
+  rdfs:comment "" ; #NEEDS COMMENT!!
+  rdfs:subClassOf cebp:IndigenousConservationConcept .
+
+cebp:FoodSecurity a owl:Class ;
+  rdfs:label "Food Security"@en ;
+  rdfs:comment "" ; #NEEDS COMMENT!!
+  rdfs:subClassOf cebp:IndigenousConservationConcept .
+
+cebp:FoodSecurityConcern a owl:Class ;
+  rdfs:label "Food Security Concern"@en ;
+  rdfs:comment "" ; #NEEDS COMMENT!!
+  rdfs:subClassOf cebp:FoodSecurity .
+
+cebp:SubsistencePractice a owl:Class ;
+  rdfs:label "Subsistence Practices"@en ;
+  rdfs:comment "" ; #NEEDS COMMENT!!
+  rdfs:subClassOf cebp:FoodSecurity .
+
+# --- Inuit Qaujimajatuqangit: Maligait --------------------------------------
+cebp:Maligait a owl:Class ;
+  rdfs:label "Maligait"@en ;
+  rdfs:comment "Inuit Elders in Nunavut have identified a framework for Inuit Qaujimajatuqangit grounded in four big laws or maligait. All cultural beliefs and values are associated with the implementation of these maligait, ultimately contributing to \"living a good life\", described as the purpose of being."@en ;
+  rdfs:subClassOf cebp:InuitQaujimajatugangit ;
+  dcterms:source "Government of Nunavut, Department of Culture, Language, Elders and Youth. 2007." .
+
+cebp:HolisticFramework a owl:Class ;
+  rdfs:label "Holistic Framework"@en ;
+  rdfs:comment "An integrated framework to support conditions for effective, sustained, and equitable collaborations across sectors and interests, spanning three key dimensions: holistic worldviews and perspectives, capacity development opportunities, and dedicated structural supports such as funding, resources, and leadership."@en ;
+  rdfs:subClassOf cebp:ConservationFramework ;
+  dcterms:source "Bowen and Ebi 2015; Meissner et al." .
+
+cebp:CommunityBasedMonitoring a owl:Class ;
+  rdfs:label "Community Based Monitoring"@en ;
+  rdfs:comment "A process where local citizens and groups work together to track and respond to issues that affect their daily lives, collecting their own data, overseeing local services, and protecting their environment using both traditional knowledge and scientific tools. Within the Canada BioGenome Project and the Arctic Genomics project, community-based monitoring is applied through workshop-reported practices."@en ;
+  rdfs:subClassOf cebp:ConservationStrategy .
+
+cebp:GovernmentOfNunavut a owl:Class ;
+  rdfs:label "Government of Nunavut"@en ;
+  rdfs:comment "" ; #NEEDS COMMENT!!
+  rdfs:subClassOf cebp:Government .
+
+cebp:ParksCanada a owl:Class ;
+  rdfs:label "Parks Canada"@en ;
+  rdfs:comment "" ; #NEEDS COMMENT!!
+  rdfs:subClassOf cebp:CanadianGovernment .
+
+cebp:TrainingForNonIndigenousResearchers a owl:Class ;
+  rdfs:label "Training For Non-Indigenous Researchers"@en ;
+  rdfs:comment "" ; #NEEDS COMMENT!!
+  rdfs:subClassOf cebp:Producer .
+
+cebp:affects a owl:ObjectProperty ;
+  rdfs:label "affects"@en ;
+  rdfs:comment "" ; #NEEDS COMMENT!!
+  # SHACL-MAP: ConservationFramework->Environment; ConservationFramework->SocialEcology;
+  #            ConservationPolicyFramework->Environment; ConservationPolicyFramework->Species;
+  #            ConservationPolicyFramework->SocialEcology (all v21)
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf ( cebp:ConservationFramework cebp:ConservationPolicyFramework )
+  ] ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf ( cebp:Environment cebp:SocialEcology cebp:Species )
+  ] .
+
+cebp:isFoundIn a owl:ObjectProperty ;
+  rdfs:label "is found in"@en ;
+  rdfs:comment "" ; #NEEDS COMMENT!!
+  # SHACL-MAP: Species->Location (v21)
+  rdfs:domain cebp:Species ;
+  rdfs:range cebp:Location .
+
+cebp:isTiedTo a owl:ObjectProperty ;
+  rdfs:label "is tied to"@en ;
+  rdfs:comment "" ; #NEEDS COMMENT!!
+  # SHACL-MAP: SocialEcology->Location; Location->Environment (all v21)
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf ( cebp:SocialEcology cebp:Location )
+  ] ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf ( cebp:Location cebp:Environment )
+  ] .
+
+cebp:isConnectedTo a owl:ObjectProperty ;
+  rdfs:label "is connected to"@en ;
+  rdfs:comment "Shows a connection between Concept A and Concept B that is not causal, is-a, or part-of, but should be considered as exerting influence or having an effect one on the other."@en ;
+  # SHACL-MAP: Environment->SocialEcology; GenomicsMethod->ConservationStrategy;
+  #            GenomicsTerm->ConservationStrategy; Species->SocialEcology (all v21)
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf ( cebp:Environment cebp:GenomicsMethod cebp:GenomicsTerm cebp:Species )
+  ] ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf ( cebp:SocialEcology cebp:ConservationStrategy )
+  ] .
+
+cebp:relatesTo a owl:ObjectProperty ;
+  rdfs:label "relates to"@en ;
+  rdfs:comment "" ; #NEEDS COMMENT!!
+  # SHACL-MAP: GenomicsMethod->Species; Resource->GenomicsMethod; Resource->Species (all v21)
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf ( cebp:GenomicsMethod cebp:Resource )
+  ] ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf ( cebp:Species cebp:GenomicsMethod )
+  ] .
