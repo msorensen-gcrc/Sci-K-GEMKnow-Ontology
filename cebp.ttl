@@ -21,7 +21,7 @@
   dcterms:creator "Geomatics and Cartographic Research Centre (GCRC), Carleton University" ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   dcterms:created "2023-01-01"^^xsd:date ;
-  dcterms:modified "2026-07-08"^^xsd:date .
+  dcterms:modified "2026-08-11"^^xsd:date .
 
 
 # NOTE A LOT OF THINGS NEED RDFS:LABEL and COMMENT!!!!
