@@ -21,6 +21,54 @@ No changes yet. For upcoming work see `CLEANUP_PROCEDURE.md`.
 
 ---
 
+## [0.6.0] 2026-08-11
+
+Folded in the new relations from Christy Caudill's v21 edit. She worked from the 0.5.0 file in Protégé, so her version reintroduced the namespace and prefix problems that were fixed back in 0.2.0 (the `untitled-ontology-79` base, `dcterms: <dcterms:>`, the `cebp1:`/`cebp2:` split, and external vocabulary terms redeclared as `owl:Class`). None of that was carried over, only the new relations were taken. Note this has only been an update to the ontology and thus has not been transferred to the Neo4j database yet (as outlined in step 9 in CLEANUP-PROCEDURE.md). Until that time the ontology will be out of sync from the database.
+
+### Added
+
+- New object properties: `isConnectedTo` and `relatesTo`. `isConnectedTo` came with a definition from Christy. `relatesTo` has a label but still needs a comment.
+- `rdfs:domain` and `rdfs:range` for `affects`, `isFoundIn`, and `isTiedTo`. These three were added in 0.5.0 with no linkages, so this is the first time they identify which classes they connect. They still need comments.
+- New class pairings on `informs`: `ConservationStrategy` → `ConservationFramework`, `IndigenousConservationConcept` → `ConservationStrategy`, `IndigenousConservationConcept` → `SocialEcology`, `SocialEcology` → `CommunityBasedMonitoring`, and `Actor` → `ConservationFramework`.
+- New class pairings on `isPartOf`: `Environment` → `SocialEcology`, `Species` → `ConservationStrategy`, `Species` → `SocialEcology`, and `Actor` → `SocialEcology`.
+- New class pairing on `isRepresentativeOf`: `ConservationManager` → `ParksCanada`.
+- SHACL-MAP notes for all of the above. The pairings that came from v21 are marked so they can be told apart from the earlier ones.
+
+### Changed
+
+- The relations Christy wrote as `owl:someValuesFrom` restrictions were converted to `rdfs:domain` and `rdfs:range` with `owl:unionOf`, the same way the earlier restrictions were handled back in 0.4.0.
+- Class names in the new relations were converted to singular to match our class schema, e.g. `Resources` → `Resource`, `Roles` → `Role`, `ConservationFrameworks` → `ConservationFramework`, `communityBasedMonitoring` → `CommunityBasedMonitoring`.
+- Added the `@en` language code to labels that were missing it, e.g. `isConnectedTo`.
+
+### Fixed
+
+- `owl:versionIRI` was still pointing at 0.4.0 while `owl:versionInfo` said 0.5.0. Both now say 0.6.0.
+- `rdfs:Range` on `cebp:hasRole` was capitalized, which is not a real property. Corrected to `rdfs:range`.
+
+---
+
+## [0.5.0] 2026-07-02
+
+Folded in additions from Christy Caudill's June30-2026 edit of the ontology (made independently from the v18 baseline). Reconciled her changes against the current cleaned version so the existing structural fixes and naming conventions were not reintroduced. Note this has only been an update to the ontology and thus has not been transferred to the Neo4j database yet (as outlined in step 9 in CLEANUP-PROCEDURE.md). Until that time the ontology will be out of sync from the database.
+
+### Added
+
+- New classes: `IndigenousConservationConcept`, `CulturalPractice`, `FoodSecurity`, `FoodSecurityConcern`, `SubsistencePractice`, `HistoricalRelationshipWithLand`, `Maligait`, `HolisticFramework`, `CommunityBasedMonitoring`, `GovernmentOfNunavut`, `ParksCanada`, `TrainingForNonIndigenousResearchers`
+- New object properties: `affects`, `isFoundIn`, `isTiedTo`. These were added, however, without a domain, range, or comment and still need to be documented.
+- `SubsistencePractice` added to the domain, and `HistoricalRelationshipWithLand` added to the range, of `cebp:isPartOf`, along with a SHACL-MAP note recording the pairing.
+
+### Changed
+
+- Class names from Christy's edit were converted to singular to match our class schema, e.g. `HolisticFrameworks` → `HolisticFramework`.
+- Descriptions that were pasted directly from source papers (`Maligait`, `HolisticFramework`, `CommunityBasedMonitoring`) were rewritten as proper `rdfs:comment` definitions, with the citation moved to `dcterms:source`.
+
+### Fixed
+
+- Did not carry over `Provincal`, a misspelled duplicate of the already-existing `ProvincialGovernment`.
+- Did not carry over the `hasRole`/`someValuesFrom` restriction that had `IndigenousConservationConcept` as a subclass of `Actor`. A body of concepts being a subclass of an actor doesn't make much sense and is therefore a category error. So, `IndigenousConservationConcept` was kept as a standalone class with no parent for now until this is discussed further.
+
+---
+
 ## [0.4.0] 2026-06-04
 
 Structural cleanup version release. This release addresses issue 6 and 7 in the CLEANUP-PROCEDURE.md document. Note this has only been an update to the ontology and thus has not been transferred to the Neo4j database yet (as outlined in step 9 in CLEANUP-PROCEDURE.md). Until that time the ontology will be out of sync from the database.
